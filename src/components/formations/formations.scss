@@ -1,0 +1,76 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   15-09-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 18-09-2017
+
+formations {
+
+  max-width: 880px;
+  right: 0;
+  margin: auto;
+  display: block;
+
+  section {
+    margin-bottom: 80px;
+  }
+  p.title {
+      font-size: 18px;
+      color: #fff;
+      text-transform: uppercase;
+      background: #021689;
+      padding: 5px;
+      letter-spacing: 0.1em;
+  }
+
+  article {
+    border-bottom: solid 1px;
+  }
+
+  #front-end, #back-end {
+    h2 {
+      padding-bottom: 4px;
+      line-height: 1.3em;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    .categorie {
+      color: #717073;
+      margin: 10px 0px 0px 0px;
+      padding: 0px;
+    }
+    span.title, span.pdf {
+        display: inline-block;
+        margin-left: 10px;
+    }
+  }
+  #front-end {
+    h2, h3 {
+      color: #387c2b;
+    }
+    h3 {
+      border-bottom: 1px solid #387c2b;
+    }
+    article h2{
+      color: #387c2b;
+    }
+    .titre_formations {
+      border-bottom:solid 1px #387c2b;
+    }
+  }
+  #back-end {
+    h2, h3 {
+      color: #0078AE;
+    }
+    h3 {
+      border-bottom: 1px solid #0078AE;
+    }
+    article h2 {
+      color: #0078AE;
+    }
+    .titre_formations {
+      border-bottom:solid 1px #0078AE;
+    }
+  }
+
+}

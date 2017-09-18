@@ -1,26 +1,13 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Ionic Nomades.ch
+Refactoring Nomades WP theme with Ionicframework
 
-## How to use this template
-
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
+## Install
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ nvm use 7
+$ npm install
+$ ionic serve
 ```
 
-Then, to run it, cd into `myBlank` and run:
+## About author
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+Hi, i'm a Front-end developper living in Geneva Switzerland and i build hybrid mobile & web applications for almost 15 years. You can follow me on Twitter @FazioNico or checkout my own website http://nicolasfazio.ch

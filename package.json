@@ -1,8 +1,8 @@
 {
   "name": "ionic-nomades",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Nicolas Fazio",
+  "homepage": "http://nicolasfazio.ch/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -34,5 +34,5 @@
     "@ionic/app-scripts": "2.1.4",
     "typescript": "2.3.4"
   },
-  "description": "An Ionic project"
+  "description": "Nomades WP theme with Ionicframework"
 }

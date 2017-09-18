@@ -1,0 +1,155 @@
+
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <p class="title">FORMATIONS DIPLOMANTES DANS LES METIERS DU WEB</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!-- {{ (formations|async)|json }} -->
+<section id="front-end">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <header class="titre_formations">
+          <h2>DIPLÔMES D’INTÉGRATEUR WEB ET DE FRONT-END DÉVELOPPEUR</h2>
+        </header>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <article *ngFor="let formation of (frontEndFormations|async)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p class="categorie">{{formation?.t_formation_b1}}</p>
+          <h2>{{ formation?.title?.rendered }}</h2>
+        </ion-col>
+        <ion-col text-right>
+
+          <span class="title">
+            Prochaines dates : <br>
+            {{ formation?.date_formation_du}} - {{ formation?.date_formation_au}}
+          </span>
+          <span class="pdf">
+            <a
+            *ngIf="formation?.wp_custom_attachment?.url"
+            href="{{ formation.wp_custom_attachment.url}}"
+            alt=""
+            target="_blank"><img src="{{appConfig?.templateEndPoint}}/images/logo-acrobat-reader.jpg" alt="">
+          </a>
+        </span>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        {{ formation?.content_block_formation_1 }}
+      </ion-col>
+      <ion-col>
+        {{ formation?.content_block_formation_2 }}
+      </ion-col>
+      <ion-col>
+        {{ formation?.content_block_formation_3 }}
+      </ion-col>
+      <ion-col>
+        {{ formation?.content_block_formation_4 }}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</article>
+
+<ion-grid>
+  <ion-row #rowSvg>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="1" class="txt_duree" x="0" y="32">Durée</text>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="colWidth-50" y="32">10 jours</text>
+      </svg>
+    </ion-col>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth"  height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="(colWidth)-50" y="32">20 jours</text>
+      </svg>
+    </ion-col>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline  [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="(colWidth)-50" y="32">30 jours</text>
+      </svg>
+    </ion-col>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="(colWidth)-50" y="32">40 jours</text>
+      </svg>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</section>
+
+
+<section id="back-end">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <header class="titre_formations">
+          <h2>DIPLÔMES DE BACK-END DEVELOPER ET DE MOBILE APPLICATIONS DEVELOPER</h2>
+        </header>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <article *ngFor="let formation of (backEndFormations|async)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p class="categorie">{{formation?.t_formation_b1}}</p>
+          <h2>{{ formation?.title?.rendered }}</h2>
+        </ion-col>
+        <ion-col text-right>
+
+          <span class="title">
+            Prochaines dates : <br>
+            {{ formation?.date_formation_du}} - {{ formation?.date_formation_au}}
+          </span>
+          <span class="pdf">
+            <a
+            *ngIf="formation?.wp_custom_attachment?.url"
+            href="{{ formation.wp_custom_attachment.url}}"
+            alt=""
+            target="_blank"><img src="{{appConfig?.templateEndPoint}}/images/logo-acrobat-reader.jpg" alt="">
+          </a>
+        </span>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        {{ formation?.content_block_formation_1 }}
+      </ion-col>
+      <ion-col>
+        {{ formation?.content_block_formation_2 }}
+      </ion-col>
+      <ion-col>
+        {{ formation?.content_block_formation_3 }}
+      </ion-col>
+      <ion-col>
+        {{ formation?.content_block_formation_4 }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</article>
+
+
+</section>
