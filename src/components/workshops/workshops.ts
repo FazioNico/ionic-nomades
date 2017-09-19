@@ -30,7 +30,7 @@ export class WorkshopsComponent {
 
   constructor(private wpApi:WpFormationsProvider) {
     this.workshops = this.wpApi.getArray({path:'workshop'})
-	    .map(res => res.json());
+	    .map(res => res.json().sort((wk:any)=> wk.wk_position).reverse())
   }
 
 }

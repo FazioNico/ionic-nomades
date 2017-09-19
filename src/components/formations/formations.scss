@@ -10,9 +10,15 @@ formations {
   right: 0;
   margin: auto;
   display: block;
+  border-bottom: solid 1px;
 
   section {
     margin-bottom: 50px;
+  }
+  section {
+    section {
+      margin-bottom:0px;
+    }
   }
   p.title {
       font-size: 18px;

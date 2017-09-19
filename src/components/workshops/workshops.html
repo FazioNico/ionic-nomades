@@ -1,4 +1,138 @@
 <!-- Generated template for the WorkshopsComponent component -->
-<div>
+
+<section>
+  <h2 class="titre_WORKSHOP">W<span class="rouge">O</span>R<span class="bleu">K</span><span class="vert">S</span>H<span class="rouge">O</span>P<span class="vert">S</span></h2>
+
+<!--
+  TODO:
+  fix *ngFor with workshop articles.... prevent empty elements
+-->
+  <section id="front-end">
+    <header>
+      <p class="slogan">nomades advanced technologies interactive workshops</p>
+      <h2>front-end development</h2>
+    </header>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <section>
+            <h2>Interfaces graphiques</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 7">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+        <ion-col>
+          <section>
+            <h2>Web editing</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 8">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+        <ion-col>
+          <section>
+            <h2>Programmation javascript</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 9">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+
+  <section id="mobile_wk">
+    <header>
+      <p class="slogan">nomades advanced technologies interactive workshops</p>
+      <h2>mobile applications development</h2>
+    </header>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <section>
+            <h2>Mobile-web apps. develpmt.</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 13">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+        <ion-col>
+          <section>
+            <h2>Mobile native apps s/Android</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 14">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+        <ion-col>
+          <section>
+            <h2>Mobile native apps s/iOS</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 15">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <section id="back_end_wk">
+    <header>
+      <p class="slogan">nomades advanced technologies interactive workshops</p>
+      <h2>back-end development</h2>
+    </header>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <section>
+            <h2>Frameworks & librairies JS</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 10">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+        <ion-col>
+          <section>
+            <h2>MProgrammation PHP/MySQL</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 12">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+        <ion-col>
+          <section>
+            <h2>Mobile native apps s/iOS</h2>
+            <article *ngFor="let workshop of (workshops|async)">
+              <div *ngIf="workshop.parcours[0] === 11">
+                <h2>{{workshop?.title.rendered}}</h2>
+              </div>
+            </article>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+</section>
+
+<!-- <div>
   {{ (workshops|async)|json }}
-</div>
+</div> -->
