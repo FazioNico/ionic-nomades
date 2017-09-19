@@ -3,7 +3,7 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 18-09-2017
+ * @Last modified time: 19-09-2017
  */
 
 import { Injectable } from '@angular/core';
@@ -25,8 +25,13 @@ export class WpFormationsProvider{
   constructor(public http: Http) {
   }
 
-  getArray():Observable<any> {
-		return  this.http.get( `${APP_CONFIG.apiEndPoint}/formation`)
+  getArray(datas:{path:string}):Observable<any> {
+		return  this.http.get( `${APP_CONFIG.apiEndPoint}/${datas.path}?per_page=100`)
+	    .map(res => res)
+	}
+
+  getObjectID(req:{path:string,id:string|number}):Observable<any> {
+		return  this.http.get( `${APP_CONFIG.apiEndPoint}/${req.path}/${req.id}`)
 	    .map(res => res)
 	}
 }

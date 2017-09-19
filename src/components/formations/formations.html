@@ -48,16 +48,24 @@
 
     <ion-row>
       <ion-col>
-        {{ formation?.content_block_formation_1 }}
+        <span class="colorize">
+          {{ formation?.content_block_formation_1 }}
+        </span>
       </ion-col>
       <ion-col>
-        {{ formation?.content_block_formation_2 }}
+        <span class="colorize">
+          {{ formation?.content_block_formation_2 }}
+        </span>
       </ion-col>
       <ion-col>
-        {{ formation?.content_block_formation_3 }}
+        <span class="colorize">
+          {{ formation?.content_block_formation_3 }}
+        </span>
       </ion-col>
       <ion-col>
-        {{ formation?.content_block_formation_4 }}
+        <span class="colorize last">
+          {{ formation?.content_block_formation_4 }}
+        </span>
       </ion-col>
     </ion-row>
 
@@ -86,8 +94,8 @@
       </svg>
     </ion-col>
     <ion-col>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <polyline [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="(+colWidth)+10" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline [attr.points]="'0,3 0,13 '+((+colWidth)+10)+',13'" fill="none" stroke="#333333" stroke-width="1"></polyline>
         <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="(colWidth)-50" y="32">40 jours</text>
       </svg>
     </ion-col>
@@ -136,20 +144,64 @@
 
     <ion-row>
       <ion-col>
-        {{ formation?.content_block_formation_1 }}
+        <span class="colorize">
+          {{ formation?.content_block_formation_1 }}
+        </span>
       </ion-col>
       <ion-col>
-        {{ formation?.content_block_formation_2 }}
+        <span class="colorize">
+          {{ formation?.content_block_formation_2 }}
+        </span>
       </ion-col>
       <ion-col>
-        {{ formation?.content_block_formation_3 }}
+        <span class="colorize">
+          {{ formation?.content_block_formation_3 }}
+        </span>
       </ion-col>
       <ion-col>
-        {{ formation?.content_block_formation_4 }}
+        <span class="colorize last">
+          {{ formation?.content_block_formation_4 }}
+        </span>
       </ion-col>
     </ion-row>
   </ion-grid>
 </article>
 
 
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="1" class="txt_duree" x="0" y="32">Durée</text>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="colWidth-50" y="32">10 jours</text>
+      </svg>
+    </ion-col>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth"  height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="(colWidth)-50" y="32">20 jours</text>
+      </svg>
+    </ion-col>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline  [attr.points]="point" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="(colWidth)-50" y="32">30 jours</text>
+      </svg>
+    </ion-col>
+    <ion-col>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="(+colWidth)+10" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline [attr.points]="'0,3 0,13 '+((+colWidth)+10)+',13'" fill="none" stroke="#333333" stroke-width="1"></polyline>
+        <text font-family="Helvetica, Arial, sans-serif" opacity="0.9999999999999999" class="txt_duree" [attr.x]="(colWidth)-50" y="32">40 jours</text>
+      </svg>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</section>
+
+<section id="about_formations">
+  <h2>{{ (pageInfo|async)?.title?.rendered }}</h2>
+  <div [innerHtml]="(pageInfo|async)?.content.rendered"></div>
+  <div class="clearfix"></div>
 </section>

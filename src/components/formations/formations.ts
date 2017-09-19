@@ -3,7 +3,7 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 18-09-2017
+ * @Last modified time: 19-09-2017
  */
 
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
@@ -29,11 +29,12 @@ export class FormationsComponent implements OnInit{
   public formations:Observable<any[]>
   public frontEndFormations:Observable<any[]>
   public backEndFormations:Observable<any[]>
+  public pageInfo:Observable<any>
   @Input('appConfig') readonly appConfig: TAppConfig;
   @ViewChild('rowSvg') rowSvg:ElementRef
 
   constructor(private wpApi:WpFormationsProvider) {
-    this.formations = this.wpApi.getArray()
+    this.formations = this.wpApi.getArray({path:'formation'})
 	    .map(res => res.json());
   }
 
@@ -43,6 +44,7 @@ export class FormationsComponent implements OnInit{
     this.point = `0,3 0,13 ${this.colWidth},13`;
 
     if(!this.formations)return;
+    this.pageInfo = this.wpApi.getObjectID({path:'pages', id:23}).map(res => res.json());
     this.frontEndFormations = this.formations.map(formations=> formations.filter(f=>f.cursus[0] === 2).sort(f=>f.formation_position))
     this.backEndFormations = this.formations.map(formations=> formations.filter(f=>f.cursus[0] === 3).sort(f=>f.formation_position))
 

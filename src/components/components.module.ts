@@ -11,12 +11,14 @@ import { CommonModule } from '@angular/common';
 import { IonicPageModule } from 'ionic-angular';
 import { HeaderPeopleComponent } from './header-people/header-people';
 import { FormationsComponent } from './formations/formations';
+import { WorkshopsComponent } from './workshops/workshops';
 
 @NgModule({
 
 	declarations: [
 		HeaderPeopleComponent,
-    FormationsComponent
+    FormationsComponent,
+    WorkshopsComponent
 	],
 	imports: [
 		CommonModule,
@@ -24,7 +26,8 @@ import { FormationsComponent } from './formations/formations';
 	],
 	exports: [
 		HeaderPeopleComponent,
-    FormationsComponent
+    FormationsComponent,
+    WorkshopsComponent
 	]
 })
 export class ComponentsModule {}

@@ -1,3 +1,9 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   08-09-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 19-09-2017
+
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
@@ -84,5 +90,30 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
+// @import "roboto";
 @import "noto-sans";
+@font-face {
+  font-family: 'AkzidenzGrotesk-Roman';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../assets/fonts/AkzidenzGrotesk-Roman.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'AkzidenzGrotesk-Light';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../assets/fonts/AkzidenzGrotesk-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Helvnul';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../assets/fonts/HELVNUL.woff') format('woff')
+}
+$font-family-base: 'AkzidenzGrotesk-light';
+$font-family-ios-base: 'AkzidenzGrotesk-light';
+$font-family-md-base: 'AkzidenzGrotesk-light';
+$font-family-wp-base: 'AkzidenzGrotesk-light';
+$font-family-base: "AkzidenzGrotesk-light";
