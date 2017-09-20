@@ -7,7 +7,7 @@
  */
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the WorkshopDetailsPage page.
@@ -30,6 +30,7 @@ export class WorkshopDetailsPage {
 
   constructor(
     public navCtrl: NavController,
+    public viewCtrl: ViewController,
     public navParams: NavParams
   ) {
     this.wk = this.navParams.get('wk')
@@ -58,4 +59,7 @@ export class WorkshopDetailsPage {
     return this._color
   }
 
+  goInscription(){
+    this.viewCtrl.dismiss(true);
+  }
 }

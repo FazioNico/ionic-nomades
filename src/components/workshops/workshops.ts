@@ -44,6 +44,15 @@ export class WorkshopsComponent {
       'WorkshopDetailsPage', { wk: workshop }
     );
     this._modal.present();
+    this._modal.onDidDismiss(data => {
+
+     (data)? this.scrollToContact() : null;
+   });
+  }
+
+  scrollToContact(){
+    // TODO scroll to contact section...
+    console.log('scrollToContact...');
   }
 
 }

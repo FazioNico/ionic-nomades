@@ -22,8 +22,10 @@
       Sessions: {{ wk.date_session_1_du }} <br/>
       Ecolage: Sf {{ wk.ecolage_wk }}
     </p>
-    <p right-align>
-      pré-inscription
+    <p class="inscription"
+      (click)="goInscription()"
+      [ngStyle]="{'color': color}">
+      pré-inscription >
     </p>
   </div>
 </ion-content>
