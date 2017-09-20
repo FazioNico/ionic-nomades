@@ -200,8 +200,8 @@
 
 </section>
 
-<section id="about_formations">
-  <h2>{{ (pageInfo|async)?.title?.rendered }}</h2>
-  <div [innerHtml]="(pageInfo|async)?.content.rendered"></div>
+<section id="about_formations" *ngIf="(pageInfo|async); let infos">
+  <h2>{{ infos?.title?.rendered }}</h2>
+  <div [innerHtml]="infos?.content.rendered"></div>
   <div class="clearfix"></div>
 </section>

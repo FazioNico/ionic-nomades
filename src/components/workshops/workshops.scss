@@ -2,7 +2,7 @@
 // @Date:   19-09-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 19-09-2017
+// @Last modified time: 20-09-2017
 
 workshops {
   max-width: 880px;
@@ -31,5 +31,137 @@ workshops {
   }
   h2 {
     font-size: 1.5rem;
+  }
+
+  #front-end {
+    header {
+        background: #387c2b;
+        color: #fff;
+        text-align: center;
+        padding: 12px 15px;
+        margin-bottom: 30px;
+
+        p.slogan {
+          color: #fff;
+          font-size: 20px;
+          margin: 0px auto;
+        }
+        h2 {
+            font-size: 36px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            letter-spacing: 0.01em;
+            font-weight: 400;
+        }
+    }
+
+    section > h2 {
+          font-size: 18px;
+          color: #717073;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #387c2b;
+    }
+    section {
+
+      article {
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        h2 {
+            color: #387C2B;
+            margin-bottom:0px;
+            cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+
+  #mobile_wk {
+    header {
+        background: #f6a01a;
+        color: #fff;
+        text-align: center;
+        padding: 12px 15px;
+        margin-bottom: 30px;
+
+        p.slogan {
+          color: #fff;
+          font-size: 20px;
+          margin: 0px auto;
+        }
+        h2 {
+            font-size: 36px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            letter-spacing: 0.01em;
+            font-weight: 400;
+        }
+    }
+
+    section > h2 {
+          font-size: 18px;
+          color: #717073;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #f6a01a;
+    }
+    section {
+
+      article {
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        h2 {
+            color: #f6a01a;
+            margin-bottom:0px;
+            cursor: pointer;
+        }
+      }
+    }
+  }
+
+
+  #back_end_wk {
+    header {
+        background: #0078ae;
+        color: #fff;
+        text-align: center;
+        padding: 12px 15px;
+        margin-bottom: 30px;
+
+        p.slogan {
+          color: #fff;
+          font-size: 20px;
+          margin: 0px auto;
+        }
+        h2 {
+            font-size: 36px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            letter-spacing: 0.01em;
+            font-weight: 400;
+        }
+    }
+
+    section > h2 {
+          font-size: 18px;
+          color: #717073;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #0078ae;
+    }
+    section {
+
+      article {
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        h2 {
+            color: #0078ae;
+            margin-bottom:0px;
+            cursor: pointer;
+        }
+      }
+    }
   }
 }

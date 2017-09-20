@@ -3,7 +3,7 @@
  * @Date:   19-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 19-09-2017
+ * @Last modified time: 20-09-2017
  */
 
 import { Component } from '@angular/core';
@@ -29,6 +29,7 @@ export class WorkshopsComponent {
   public pageInfo:Observable<any>
 
   constructor(private wpApi:WpFormationsProvider) {
+    console.log('deh')
     this.workshops = this.wpApi.getArray({path:'workshop'})
 	    .map(res => res.json().sort((wk:any)=> wk.wk_position).reverse())
   }
