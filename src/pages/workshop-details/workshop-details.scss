@@ -1,0 +1,29 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   20-09-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 20-09-2017
+
+page-workshop-details {
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  .toolbar-background {
+    background: none!important;
+  }
+  .toolbar-title {
+    color: #fff;
+  }
+}
+.modal-wrapper {
+  width: 100%!important;
+  max-width: 300px!important;
+  margin:auto!important;
+  left: calc(50% - (300px/2));
+}

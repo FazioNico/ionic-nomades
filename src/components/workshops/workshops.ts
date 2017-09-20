@@ -7,7 +7,7 @@
  */
 
 import { Component } from '@angular/core';
-import { Row } from 'ionic-angular';
+import { ModalController, Modal } from 'ionic-angular';
 import { Observable } from "rxjs/Observable";
 
 import { TAppConfig } from "../../app/app.config";
@@ -27,11 +27,23 @@ export class WorkshopsComponent {
 
   public workshops:Observable<any[]>
   public pageInfo:Observable<any>
+  private _modal:Modal
 
-  constructor(private wpApi:WpFormationsProvider) {
+
+  constructor(
+    private wpApi:WpFormationsProvider,
+    private modalCtrl: ModalController
+  ) {
     console.log('deh')
     this.workshops = this.wpApi.getArray({path:'workshop'})
 	    .map(res => res.json().sort((wk:any)=> wk.wk_position).reverse())
+  }
+
+  displayDetail(workshop:any):void {
+    this._modal = this.modalCtrl.create(
+      'WorkshopDetailsPage', { wk: workshop }
+    );
+    this._modal.present();
   }
 
 }

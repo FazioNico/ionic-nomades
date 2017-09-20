@@ -15,12 +15,12 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Interfaces graphiques</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 7">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -29,12 +29,12 @@
             </article>
           </section>
         </ion-col>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Web editing</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 8">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -43,12 +43,12 @@
             </article>
           </section>
         </ion-col>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Programmation javascript</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 9">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -73,7 +73,7 @@
             <h2>Mobile-web apps. develpmt.</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 13">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -87,7 +87,7 @@
             <h2>Mobile native apps s/Android</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 14">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -101,7 +101,7 @@
             <h2>Mobile native apps s/iOS</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 15">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -126,7 +126,7 @@
             <h2>Frameworks & librairies JS</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 10">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -140,7 +140,7 @@
             <h2>Programmation PHP/MySQL</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 12">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
@@ -154,7 +154,7 @@
             <h2>Mobile native apps s/iOS</h2>
             <article *ngFor="let workshop of wks">
               <div *ngIf="workshop.parcours[0] === 11">
-                <h2>{{workshop?.title.rendered}}</h2>
+                <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
                   <span [innerHtml]="workshop?.desc_resume_workshop"></span>
