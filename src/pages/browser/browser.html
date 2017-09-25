@@ -1,10 +1,10 @@
 
 
 
-<ion-content padding>
+<ion-content>
   <header-people [baseUrl]="appConfig.templateEndPoint"></header-people>
   <formations [appConfig]="appConfig"></formations>
   <workshops></workshops>
-  <contact></contact>
+  <contact [baseUrl]="appConfig.templateEndPoint"></contact>
   <students-projects></students-projects>
 </ion-content>

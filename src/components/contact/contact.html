@@ -1,45 +1,52 @@
 <!-- Generated template for the ContactComponent component -->
+<div class="container">
+  <div #sliderContainer class="sliderContainer">
+    <div class="slide_item" *ngFor="let people of peoples;">
+      <div class="person">
+        <img src="{{baseUrl}}/images/perso_contact/{{people}}" alt="">
+      </div>
+      <div class="animTxt">
+        <p>
+          Mes clients sont des sociétés qui demandent des applications web développées avec les techniques les plus avancées.
+          <br/>
+          <span>
+            Bien sûr, je peux le faire ...
+          </span>
+        </p>
+      </div>
 
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <section id="slide_contact">
-        <div class="_L_larger_site intro_contact">
-          <h2>Workshops personnalisés sur demande</h2>
-          <p>Ces pages contiennent une sélection de workshops parmi les plus demandés dans le développement-web. D’autres  Workshops peuvent être organisés sur demande, avec le programme, les dates, les horaires et le lieu souhaités par les clients. Les cours peuvent être dispensés en français ou en anglais. N’hésitez pas à <strong>nous Contacter</strong>.</p>
-        </div>
-      </section>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col></ion-col>
-    <ion-col>
-      <form>
-        <h2>Contact</h2>
-        <ion-list>
-
-          <ion-item>
-            <ion-label color="primary" fixed>Nom</ion-label>
-            <ion-input type="tel" placeholder="Tel Input"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label color="primary" fixed>Prénom</ion-label>
-            <ion-input type="tel" placeholder="Tel Input"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label color="primary" fixed>E-mail</ion-label>
-            <ion-input type="tel" placeholder="Tel Input"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label color="primary" fixed>Objet</ion-label>
-            <ion-input type="tel" placeholder="Tel Input"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-textarea placeholder="Message"></ion-textarea>
-          </ion-item>
-        </ion-list>
-      </form>
-    </ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-</ion-grid>
+    </div>
+  </div>
+  <ion-grid id="contactFormZone">
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <form>
+          <h2>Contact</h2>
+          <ion-list>
+            <ion-item>
+              <ion-label color="primary" fixed>Nom</ion-label>
+              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" fixed>Prénom</ion-label>
+              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" fixed>E-mail</ion-label>
+              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" fixed>Objet</ion-label>
+              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-textarea placeholder="Message"></ion-textarea>
+            </ion-item>
+          </ion-list>
+        </form>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

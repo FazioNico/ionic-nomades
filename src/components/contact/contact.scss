@@ -2,28 +2,88 @@
 // @Date:   20-09-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 20-09-2017
+// @Last modified time: 25-09-2017
 
 contact {
 
+  // max-width: 880px;
+  // right: 0;
+  padding: 30px 0!important;
+  display: block;
+  background: #fbfbfb;
+
+  .container {
     max-width: 880px;
     right: 0;
     margin: auto;
     display: block;
+    overflow: hidden;
+  }
+  h2 {
+    color: #c33a32;
+    padding-bottom: 4px;
+    margin-bottom: 18px;
+    letter-spacing: 0.05em;
+  }
+  form  h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    border-bottom: 1px solid #444;
+  }
+  p {
+    font-size: 1.7rem;
+  }
+  .sliderContainer {
+    width: 2000%;
+    height: 100%;
+    padding-right: 30px;
+    transform: translateX(0px);
+    transition: 250ms ease all;
 
+    .slide_item {
+      float: left;
 
-    h2 {
-       color: #c33a32;
-       padding-bottom: 4px;
-       margin-bottom: 18px;
-       letter-spacing: 0.05em;
-   }
-   form  h2 {
-       text-transform: uppercase;
-       font-size: 14px;
-       border-bottom: 1px solid #444;
-   }
-   p {
-     font-size: 1.7rem;
-   }
+      .person, .animTxt {
+        float: left;
+        display: inline;
+      }
+      .person {
+          width: 225px;
+          margin-right: 50px;
+
+      }
+      .animTxt {
+        display: inline;
+        margin-bottom: 60px;
+        padding-right: 30px;
+        width: 380px;
+
+        p {
+          //max-width: 250px;
+          font-size: 1.5rem;
+
+          span{
+            //display: block;
+            padding-top: 20px;
+            color: #c33a32;
+          }
+        }
+      }
+    }
+    .slide_item::after {
+      content: '';
+      width: 100%;
+      display: block;
+      clear: both;
+    }
+  }
+  .sliderContainer:after {
+    content: '';
+    width: 100%;
+    display: block;
+    clear: both;
+  }
+  #contactFormZone {
+    transform: translateY(-350px);
+  }
 }
