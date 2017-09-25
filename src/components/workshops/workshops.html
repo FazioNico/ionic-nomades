@@ -18,8 +18,8 @@
         <ion-col col-12 col-sm>
           <section>
             <h2>Interfaces graphiques</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 7">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 7})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -32,8 +32,8 @@
         <ion-col col-12 col-sm>
           <section>
             <h2>Web editing</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 8">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 8})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -46,8 +46,8 @@
         <ion-col col-12 col-sm>
           <section>
             <h2>Programmation javascript</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 9">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 9})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -71,8 +71,8 @@
         <ion-col>
           <section>
             <h2>Mobile-web apps. develpmt.</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 13">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 13})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -85,8 +85,8 @@
         <ion-col>
           <section>
             <h2>Mobile native apps s/Android</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 14">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 14})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -99,8 +99,8 @@
         <ion-col>
           <section>
             <h2>Mobile native apps s/iOS</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 15">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 15})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -124,8 +124,8 @@
         <ion-col>
           <section>
             <h2>Frameworks & librairies JS</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 10">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 10})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -138,8 +138,8 @@
         <ion-col>
           <section>
             <h2>Programmation PHP/MySQL</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 12">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 12})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
@@ -152,8 +152,8 @@
         <ion-col>
           <section>
             <h2>Mobile native apps s/iOS</h2>
-            <article *ngFor="let workshop of wks">
-              <div *ngIf="workshop.parcours[0] === 11">
+            <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 11})">
+              <div>
                 <h2 (click)="displayDetail(workshop)">{{workshop?.title.rendered}}</h2>
                 <p>
                   Dates: {{ workshop?.date_session_1_du }} au {{ workshop?.date_session_1_au }} <br/>
