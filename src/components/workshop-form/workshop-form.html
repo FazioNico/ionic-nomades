@@ -1,0 +1,112 @@
+<!-- Generated template for the WorkshopFormComponent component -->
+
+<section>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p class="en_tete">natiw | nomades advanced technologies interactive workshops</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <form [formGroup]="form">
+    <ion-grid>
+
+      <ion-row formGroupName="infos">
+        <ion-col col-8>
+          <h2>PRE-INSCRIPTION WORKSHOPS</h2>
+          <ion-list>
+            <ion-item>
+              <ion-label color="dark" fixed>Nom</ion-label>
+              <ion-input type="text" name="last" formControlName="last"  placeholder=""></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" fixed>Prénom</ion-label>
+              <ion-input type="text" formControlName="first" name="first" placeholder=""></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" fixed>Profession</ion-label>
+              <ion-input type="text" formControlName="work" name="work" placeholder=""></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" fixed>Date de naissance</ion-label>
+              <ion-input type="text" formControlName="bday" name="bday" placeholder=""></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" fixed>E-mail</ion-label>
+              <ion-input type="email" formControlName="email" name="email" placeholder=""></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" fixed>Adresse, rue, numéro</ion-label>
+              <ion-input type="text" formControlName="street" name="street" placeholder=""></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" fixed>Code postale, ville</ion-label>
+              <ion-input type="text" formControlName="npaCity" name="npaCity" placeholder=""></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row formGroupName="infos">
+        <ion-col col-8>
+          <p class="like_h2">Cliquez sur les workshops auxquels vous souhaitez vous pré-inscrire</p>
+          <div class="item item-block item-md item-input item-label-fixed">
+             <div class="label label-md label-md-dark">
+                Select
+             </div>
+             <select class="item-inner">
+               <!-- TODO add wks list here + match "Ecolages" & "Dates" on inputOptionChange -->
+                <option>Option 1</option>
+                <option selected>Option 2</option>
+                <option>Option 3</option>
+             </select>
+          </div>
+          <p text-right>
+            Total écolage :
+          </p>
+          <p class="info_form">
+            Les Pré-Inscriptions doivent être confirmées par le versement des écolages deux semaines avant le début des cours. Après ce délai les Pré-Inscriptions sont caduques.
+          </p>
+        </ion-col>
+        <ion-col col-2 padding-left class="right_col">
+          <p>Dates</p>
+          <div class="item item-block item-md item-input item-label-fixed">
+             <select class="item-inner">
+                <option>Option 1</option>
+                <option selected>Option 2</option>
+                <option>Option 3</option>
+             </select>
+          </div>
+        </ion-col>
+        <ion-col col-2 class="right_col">
+          <p>Ecolages</p>
+          <ion-item>
+            <ion-input type="text" name="price" disabled="true" placeholder=""></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row formGroupName="final">
+        <ion-col col-8>
+          <h2>INSCRIPTION WORKSHOPS </h2>
+          <p>Coordonnées bancaires :</p>
+          <p class="info_paiement">
+            Virement bancaire sur le Compte<br />
+            Nomades, Rte Acacias 24,<br /> 1227 Genève <br />
+            IBAN CH56 0027 9279 2335 3400 A
+          </p>
+        </ion-col>
+        <ion-col col-4 padding-left class="textareaZone">
+          <ion-item margin-bottom>
+            <ion-textarea placeholder="Ajouter un commentaire"></ion-textarea>
+          </ion-item>
+
+          <button margin-top color="light" ion-button (click)="onContact()" [disabled]="!form.valid">Envoyer</button>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</section>

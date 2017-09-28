@@ -3,12 +3,11 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 18-09-2017
+ * @Last modified time: 28-09-2017
  */
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage } from 'ionic-angular';
 import { APP_CONFIG, TAppConfig } from "../../app/app.config";
 //import { WpFormationsProvider } from "../../providers/wp-formations/wp-formations";
 
@@ -30,18 +29,15 @@ import { APP_CONFIG, TAppConfig } from "../../app/app.config";
 export class BrowserPage {
 
   public readonly appConfig:TAppConfig;
-  public formations:any;
+  private wksList:any[];
 
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams
   ) {
     this.appConfig = APP_CONFIG;
   }
 
-  ionViewDidEnter() {
-		// this.formations = this.wpApi.getArray()
-	  //   .map(res => res.json())
-	}
+  handleWksDatas($event:any[]):void{
+    this.wksList = $event
+  }
 
 }

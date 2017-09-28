@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact';
 import { StudentsProjectsComponent } from './students-projects/students-projects';
 
 import { PipesModule } from "../pipes/pipes.module";
+import { WorkshopFormComponent } from './workshop-form/workshop-form';
 
 @NgModule({
 
@@ -25,6 +26,7 @@ import { PipesModule } from "../pipes/pipes.module";
     WorkshopsComponent,
     ContactComponent,
     StudentsProjectsComponent,
+    WorkshopFormComponent,
 	],
 	imports: [
 		CommonModule,
@@ -37,6 +39,7 @@ import { PipesModule } from "../pipes/pipes.module";
     WorkshopsComponent,
     ContactComponent,
     StudentsProjectsComponent,
+    WorkshopFormComponent,
 	]
 })
 export class ComponentsModule {}

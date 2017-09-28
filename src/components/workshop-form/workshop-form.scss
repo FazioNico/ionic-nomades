@@ -1,0 +1,49 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   28-09-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 28-09-2017
+
+workshop-form {
+  max-width: 880px;
+  right: 0;
+  margin: auto;
+  display: block;
+  background: #333;
+  font-family: 'AkzidenzGrotesk-Light';
+  color: #fff;
+  padding:5px 30px!important;
+  margin-bottom:20px;
+
+  p.en_tete {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    padding-top: 4px;
+    //margin-bottom: 64px;
+  }
+  h2, p.like_h2 {
+    font-size: 14px;
+    background: #c33a32;
+    color: #fff;
+    padding: 3px 4px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 25px;
+
+  }
+  .right_col p{
+    margin-bottom: 29px;
+  }
+  .info_form {
+    padding-top:40px;
+  }
+  .textareaZone {
+    margin-top: 1.8rem;
+  }
+  .select.item-inner {
+    background-color: #fff!important;
+  }
+  div.label {
+    width: 100px;
+  }
+}

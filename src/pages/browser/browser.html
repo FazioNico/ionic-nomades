@@ -4,7 +4,8 @@
 <ion-content>
   <header-people [baseUrl]="appConfig.templateEndPoint"></header-people>
   <formations [appConfig]="appConfig"></formations>
-  <workshops></workshops>
+  <workshops (wksDatas)="handleWksDatas($event)"></workshops>
   <contact [baseUrl]="appConfig.templateEndPoint"></contact>
+  <workshop-form [wksList]="wksList"></workshop-form>
   <students-projects></students-projects>
 </ion-content>

@@ -3,10 +3,10 @@
  * @Date:   19-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 20-09-2017
+ * @Last modified time: 28-09-2017
  */
 
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ModalController, Modal } from 'ionic-angular';
 import { Observable } from "rxjs/Observable";
 
@@ -28,7 +28,7 @@ export class WorkshopsComponent {
   public workshops:Observable<any[]>
   public pageInfo:Observable<any>
   private _modal:Modal
-
+  @Output() wksDatas = new EventEmitter();
 
   constructor(
     private wpApi:WpFormationsProvider,
@@ -37,6 +37,10 @@ export class WorkshopsComponent {
     console.log('deh')
     this.workshops = this.wpApi.getArray({path:'workshop'})
 	    .map(res => res.json().sort((wk:any)=> wk.wk_position).reverse())
+      .map(datas => {
+        this.wksDatas.emit(datas)
+        return datas
+      })
   }
 
   displayDetail(workshop:any):void {

@@ -2,7 +2,7 @@
 // @Date:   20-09-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 25-09-2017
+// @Last modified time: 28-09-2017
 
 contact {
 
@@ -14,6 +14,7 @@ contact {
 
   .container {
     max-width: 880px;
+    max-height:700px;
     right: 0;
     margin: auto;
     display: block;
@@ -24,6 +25,13 @@ contact {
     padding-bottom: 4px;
     margin-bottom: 18px;
     letter-spacing: 0.05em;
+  }
+  form {
+    .noInput {
+      .item-inner {
+        border:none!important;
+      }
+    }
   }
   form  h2 {
     text-transform: uppercase;
@@ -38,7 +46,7 @@ contact {
     height: 100%;
     padding-right: 30px;
     transform: translateX(0px);
-    transition: 250ms ease all;
+    transition: 850ms ease all;
 
     .slide_item {
       float: left;
@@ -61,10 +69,12 @@ contact {
         p {
           //max-width: 250px;
           font-size: 1.5rem;
+          padding-left: 25px;
 
-          span{
+          strong{
             //display: block;
-            padding-top: 20px;
+            //padding-top: 20px;
+            font-weight: 300;
             color: #c33a32;
           }
         }
@@ -84,6 +94,6 @@ contact {
     clear: both;
   }
   #contactFormZone {
-    transform: translateY(-350px);
+    transform: translateY(-400px);
   }
 }

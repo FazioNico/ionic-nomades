@@ -3,50 +3,45 @@
   <div #sliderContainer class="sliderContainer">
     <div class="slide_item" *ngFor="let people of peoples;">
       <div class="person">
-        <img src="{{baseUrl}}/images/perso_contact/{{people}}" alt="">
+        <img src="{{baseUrl}}/images/perso_contact/{{people.name}}" alt="">
       </div>
-      <div class="animTxt">
-        <p>
-          Mes clients sont des sociétés qui demandent des applications web développées avec les techniques les plus avancées.
-          <br/>
-          <span>
-            Bien sûr, je peux le faire ...
-          </span>
-        </p>
-      </div>
-
+      <div class="animTxt" [innerHtml]="people.txt"></div>
     </div>
   </div>
   <ion-grid id="contactFormZone">
     <ion-row>
-      <ion-col></ion-col>
+      <ion-col col-12 col-sm></ion-col>
       <ion-col>
-        <form>
+        <form [formGroup]="form">
           <h2>Contact</h2>
           <ion-list>
             <ion-item>
-              <ion-label color="primary" fixed>Nom</ion-label>
-              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+              <ion-label color="dark" fixed>Nom</ion-label>
+              <ion-input type="text" name="last" formControlName="last"  placeholder=""></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label color="primary" fixed>Prénom</ion-label>
-              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+              <ion-label color="dark" fixed>Prénom</ion-label>
+              <ion-input type="text" formControlName="first" name="first" placeholder=""></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label color="primary" fixed>E-mail</ion-label>
-              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+              <ion-label color="dark" fixed>E-mail</ion-label>
+              <ion-input type="email" formControlName="email" name="email" placeholder=""></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label color="primary" fixed>Objet</ion-label>
-              <ion-input type="tel" placeholder="Tel Input"></ion-input>
+              <ion-label color="dark" fixed>Objet</ion-label>
+              <ion-input type="text" formControlName="obj" name="obj" placeholder=""></ion-input>
+            </ion-item>
+            <ion-item class="noInput">
+              <ion-label color="dark" fixed>Message</ion-label>
             </ion-item>
             <ion-item>
-              <ion-textarea placeholder="Message"></ion-textarea>
+              <ion-textarea formControlName="msg" placeholder=""></ion-textarea>
             </ion-item>
           </ion-list>
+          <button color="dark" ion-button (click)="onContact()" [disabled]="!form.valid">Envoyer</button>
         </form>
       </ion-col>
-      <ion-col></ion-col>
+      <ion-col col-12 col-sm></ion-col>
     </ion-row>
   </ion-grid>
 </div>
