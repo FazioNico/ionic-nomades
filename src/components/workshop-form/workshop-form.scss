@@ -2,7 +2,7 @@
 // @Date:   28-09-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 28-09-2017
+// @Last modified time: 02-10-2017
 
 workshop-form {
   max-width: 880px;
@@ -45,5 +45,11 @@ workshop-form {
   }
   div.label {
     width: 100px;
+  }
+  select div {
+    position: fixed;
+     top: auto;
+     left: auto;
+     width: inherit;
   }
 }
