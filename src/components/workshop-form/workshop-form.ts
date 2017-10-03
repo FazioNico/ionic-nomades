@@ -3,7 +3,7 @@
 * @Date:   28-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 02-10-2017
+ * @Last modified time: 03-10-2017
 */
 
 import { Component, Inject, Input, OnInit } from '@angular/core';
@@ -41,16 +41,19 @@ export class WorkshopFormComponent implements OnInit {
         wks1: [''],
         wks2: [''],
         wks3: [''],
+        wks4: [''],
       }),
       dates: fb.group({
         ops1: [''],
         ops2: [''],
         ops3: [''],
+        ops4: [''],
       }),
       ecolage: fb.group({
         ops1: [''],
         ops2: [''],
         ops3: [''],
+        ops4: [''],
       }),
       final: fb.group({
         msg:[],
@@ -84,6 +87,15 @@ export class WorkshopFormComponent implements OnInit {
         let ecolage3 = this.form.controls['ecolage'].get('ops3');
         (ecolage3)? ecolage3.patchValue(wk3.ecolage_wk): console.log('err');
       }
+
+      let wk4 = (formValues.wks4.length <=0)? {} : JSON.parse(formValues.wks4)
+      if(wk4.ecolage_wk){
+        let date4 = this.form.controls['dates'].get('ops4');
+        (date4)? date4.patchValue(wk4.date_session_1_du): null;
+        let ecolage4 = this.form.controls['ecolage'].get('ops4');
+        (ecolage4)? ecolage4.patchValue(wk4.ecolage_wk): console.log('err');
+      }
+
       // calcul total:
       let total = 0;
 
@@ -99,8 +111,12 @@ export class WorkshopFormComponent implements OnInit {
       let eco3 = this.form.controls['ecolage'].get('ops3');
       (eco3)? p3 = +eco3.value : null;
 
+      let p4 = 0
+      let eco4 = this.form.controls['ecolage'].get('ops4');
+      (eco4)? p4 = +eco4.value : null;
+
       // total logic
-      total = p1 + p2 + p3;
+      total = p1 + p2 + p3 + p4;
       let t = this.form.controls['totalEcolage'];
       (t)? t.patchValue(`CHF ${total}.-`): null;
 

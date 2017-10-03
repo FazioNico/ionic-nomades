@@ -3,11 +3,14 @@
 * @Date:   20-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 28-09-2017
+ * @Last modified time: 03-10-2017
 */
 
 import { Component, Input, OnInit, ViewChild, ElementRef, Renderer, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { HttpServiceProvider } from "../../providers/http-service/http-service";
+
 /**
 * Generated class for the ContactComponent component.
 *
@@ -30,14 +33,15 @@ export class ContactComponent implements OnInit{
 
   constructor(
     @Inject(FormBuilder) fb: FormBuilder,
-    private renderer:Renderer
+    private renderer:Renderer,
+    private _http:HttpServiceProvider
   ) {
     this.form = fb.group({
-      first: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
-      last: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
+      prenom: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
+      nom: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
       email: ['', Validators.compose([Validators.required, Validators.minLength(5)])],
-      obj: ['', Validators.minLength(4)],
-      msg: ['', Validators.compose([Validators.required, Validators.minLength(5)])],
+      objet: ['', Validators.minLength(4)],
+      message: ['', Validators.compose([Validators.required, Validators.minLength(5)])],
     });
 
     this.peoples = [
@@ -56,6 +60,15 @@ export class ContactComponent implements OnInit{
 
   ngOnInit():void{
     this.initPoepleSlider()
+  }
+
+  onSubmit():void{
+    console.log(this.form.value)
+    this._http.sendContactForm(this.form.value)
+              .then(res => {
+                console.log('message sended!!')
+              })
+              .catch(err => console.error('error with post message:', err))
   }
 
   initPoepleSlider():void{

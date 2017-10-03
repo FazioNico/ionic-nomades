@@ -3,7 +3,7 @@
  * @Date:   30-05-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 25-09-2017
+ * @Last modified time: 03-10-2017
  */
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +12,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
+import { HttpServiceProvider } from '../providers/http-service/http-service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { MyApp } from './app.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -29,7 +32,8 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpServiceProvider
   ]
 })
 export class AppModule {}

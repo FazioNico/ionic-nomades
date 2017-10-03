@@ -3,7 +3,7 @@
  * @Date:   19-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 28-09-2017
+ * @Last modified time: 03-10-2017
  */
 
 import { Component, EventEmitter, Output } from '@angular/core';
@@ -59,4 +59,8 @@ export class WorkshopsComponent {
     console.log('scrollToContact...');
   }
 
+  normalizeTXT(data:any):any{
+    // parcour each proprety and remave with regex into value: &#038
+    return data
+  }
 }

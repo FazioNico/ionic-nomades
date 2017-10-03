@@ -5,13 +5,13 @@
   <h2 class="titre_WORKSHOP">W<span class="rouge">O</span>R<span class="bleu">K</span><span class="vert">S</span>H<span class="rouge">O</span>P<span class="vert">S</span></h2>
 
   <section id="front-end">
+    <header>
+      <p class="slogan">nomades advanced technologies interactive workshops</p>
+      <h2>front-end development</h2>
+    </header>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <header>
-            <p class="slogan">nomades advanced technologies interactive workshops</p>
-            <h2>front-end development</h2>
-          </header>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -68,7 +68,7 @@
     </header>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Mobile-web apps. develpmt.</h2>
             <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 13})">
@@ -82,7 +82,7 @@
             </article>
           </section>
         </ion-col>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Mobile native apps s/Android</h2>
             <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 14})">
@@ -96,7 +96,7 @@
             </article>
           </section>
         </ion-col>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Mobile native apps s/iOS</h2>
             <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 15})">
@@ -121,7 +121,7 @@
     </header>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Frameworks & librairies JS</h2>
             <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 10})">
@@ -135,7 +135,7 @@
             </article>
           </section>
         </ion-col>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Programmation PHP/MySQL</h2>
             <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 12})">
@@ -149,7 +149,7 @@
             </article>
           </section>
         </ion-col>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section>
             <h2>Mobile native apps s/iOS</h2>
             <article *ngFor="let workshop of (wks|filterBy:{prop: 'parcours', value: 11})">
@@ -164,9 +164,9 @@
           </section>
         </ion-col>
       </ion-row>
-      
+
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <section id="slide_contact">
             <div class="_L_larger_site intro_contact">
               <h2>Workshops personnalisés sur demande</h2>

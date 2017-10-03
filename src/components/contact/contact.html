@@ -17,11 +17,11 @@
           <ion-list>
             <ion-item>
               <ion-label color="dark" fixed>Nom</ion-label>
-              <ion-input type="text" name="last" formControlName="last"  placeholder=""></ion-input>
+              <ion-input type="text" name="nom" formControlName="nom"  placeholder=""></ion-input>
             </ion-item>
             <ion-item>
               <ion-label color="dark" fixed>Prénom</ion-label>
-              <ion-input type="text" formControlName="first" name="first" placeholder=""></ion-input>
+              <ion-input type="text" formControlName="prenom" name="prenom" placeholder=""></ion-input>
             </ion-item>
             <ion-item>
               <ion-label color="dark" fixed>E-mail</ion-label>
@@ -29,16 +29,16 @@
             </ion-item>
             <ion-item>
               <ion-label color="dark" fixed>Objet</ion-label>
-              <ion-input type="text" formControlName="obj" name="obj" placeholder=""></ion-input>
+              <ion-input type="text" formControlName="objet" name="objet" placeholder=""></ion-input>
             </ion-item>
             <ion-item class="noInput">
               <ion-label color="dark" fixed>Message</ion-label>
             </ion-item>
             <ion-item>
-              <ion-textarea formControlName="msg" placeholder=""></ion-textarea>
+              <ion-textarea formControlName="message" placeholder=""></ion-textarea>
             </ion-item>
           </ion-list>
-          <button color="dark" ion-button (click)="onContact()" [disabled]="!form.valid">Envoyer</button>
+          <button color="dark" ion-button (click)="onSubmit()" [disabled]="!form.valid">Envoyer</button>
         </form>
       </ion-col>
       <ion-col col-12 col-sm></ion-col>
