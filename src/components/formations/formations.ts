@@ -3,7 +3,7 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 19-09-2017
+ * @Last modified time: 04-10-2017
  */
 
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
@@ -11,7 +11,7 @@ import { Row } from 'ionic-angular';
 import { Observable } from "rxjs/Observable";
 
 import { TAppConfig } from "../../app/app.config";
-import { WpFormationsProvider } from "../../providers/wp-formations/wp-formations";
+import { WpApiProvider } from "../../providers/wp-api/wp-api";
 
 /**
  * Generated class for the FormationsComponent component.
@@ -33,7 +33,7 @@ export class FormationsComponent implements OnInit{
   @Input('appConfig') readonly appConfig: TAppConfig;
   @ViewChild('rowSvg') rowSvg:ElementRef
 
-  constructor(private wpApi:WpFormationsProvider) {
+  constructor(private wpApi:WpApiProvider) {
     this.formations = this.wpApi.getArray({path:'formation'})
 	    .map(res => res.json());
   }

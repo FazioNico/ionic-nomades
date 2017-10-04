@@ -3,10 +3,10 @@
 * @Date:   28-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 03-10-2017
+ * @Last modified time: 04-10-2017
 */
 
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 /**
@@ -15,11 +15,18 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 * See https://angular.io/api/core/Component for more info on Angular
 * Components.
 */
+
+const pureEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+export const regexValidators = {
+  email: pureEmail,
+};
+
 @Component({
   selector: 'workshop-form',
   templateUrl: 'workshop-form.html'
 })
-export class WorkshopFormComponent implements OnInit {
+export class WorkshopFormComponent {
 
   public form: FormGroup;
   @Input('wksList') wksList:any[];
@@ -29,11 +36,18 @@ export class WorkshopFormComponent implements OnInit {
   ) {
     this.form = fb.group({
       infos: fb.group({
-        first: [''],//, Validators.compose([Validators.required, Validators.minLength(2)])],
-        last: [''],//, Validators.compose([Validators.required, Validators.minLength(2)])],
+        first: ['', Validators.compose([
+          Validators.required,
+          Validators.minLength(2)
+        ])],
+        last: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
         bday: [''],
         work: [''],
-        email: [''],//, Validators.compose([Validators.required, Validators.minLength(5)])],
+        email: ['',Validators.compose([
+          Validators.required,
+          Validators.minLength(6),
+          Validators.pattern(regexValidators.email)
+        ])],
         street: [''],
         npaCity: [''],
       }),
@@ -56,8 +70,8 @@ export class WorkshopFormComponent implements OnInit {
         ops4: [''],
       }),
       final: fb.group({
-        msg:[],
-        copy:[]
+        msg:[''],
+        copy:['']
       }),
       totalEcolage: ['']
     });
@@ -118,32 +132,40 @@ export class WorkshopFormComponent implements OnInit {
       // total logic
       total = p1 + p2 + p3 + p4;
       let t = this.form.controls['totalEcolage'];
-      (t)? t.patchValue(`CHF ${total}.-`): null;
-
+      (t)
+        ? t.patchValue(`CHF ${total}.-`)
+        : null;
       console.log(total)
-      //console.log(wk1.date_session_1_du, wk1.ecolage_wk)
-      //this.form.controls['dates']
-      //  this.applyFormValues(this.form, formValues);
     })
   }
 
-  ngOnInit(){
-  }
-
   onSubmit(){
-    console.log(this.form.value)
+    //console.log(this.form.value)
+    let datasReady = {
+      prenom: this.form.value.infos.first,
+      nom: this.form.value.infos.last,
+      naissance: this.form.value.infos.bday,
+      profession: this.form.value.infos.work,
+      cp: this.form.value.infos.npaCity,
+      email: this.form.value.infos.email,
+      adresse: this.form.value.infos.street,
+      message_pre_inscription: this.form.value.final.msg,
+      recevoir_copie: true,
+      workshop_1: this.form.value.wks.wks1,
+      workshop_2: this.form.value.wks.wks2,
+      workshop_3: this.form.value.wks.wks3,
+      workshop_4: this.form.value.wks.wks4,
+      date_select_1: this.form.value.dates.ops1,
+      date_select_2: this.form.value.dates.ops2,
+      date_select_3: this.form.value.dates.ops3,
+      date_select_4: this.form.value.dates.ops4,
+      prix_wks_1: this.form.value.ecolage.ops1,
+      prix_wks_2: this.form.value.ecolage.ops2,
+      prix_wks_3: this.form.value.ecolage.ops3,
+      prix_wks_4: this.form.value.ecolage.ops4,
+      total_workshop: this.form.value.totalEcolage,
+    }
+    console.log(datasReady)
   }
 
-  private applyFormValues (group:any, formValues:any) {
-    console.log(group, formValues)
-    Object.keys(formValues).forEach(key => {
-      let formControl = <FormControl>group.controls[key];
-      console.log(formControl)
-      //   if (formControl instanceof FormGroup) {
-      //     this.applyFormValues(formControl, formValues[key]);
-      //   } else {
-      //     formControl.setValue(formValues[key]);
-      //   }
-    });
-  }
 }

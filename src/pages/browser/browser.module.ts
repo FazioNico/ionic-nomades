@@ -3,7 +3,7 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 15-09-2017
+ * @Last modified time: 04-10-2017
  */
 
 import { NgModule } from '@angular/core';
@@ -11,7 +11,7 @@ import { IonicPageModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 
 import { BrowserPage } from './browser';
-import { WpFormationsProvider } from '../../providers/wp-formations/wp-formations';
+import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { ComponentsModule } from "../../components/components.module";
 
 @NgModule({
@@ -19,7 +19,7 @@ import { ComponentsModule } from "../../components/components.module";
     BrowserPage,
   ],
   providers: [
-    WpFormationsProvider
+    WpApiProvider
   ],
   imports: [
     HttpModule,

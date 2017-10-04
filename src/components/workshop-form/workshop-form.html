@@ -225,7 +225,7 @@
         </ion-col>
         <ion-col col-4 padding-left class="textareaZone">
           <ion-item margin-bottom>
-            <ion-textarea placeholder="Ajouter un commentaire"></ion-textarea>
+            <ion-textarea formControlName="msg" placeholder="Ajouter un commentaire"></ion-textarea>
           </ion-item>
 
           <button margin-top color="light" ion-button (click)="onSubmit()" [disabled]="!form.valid">Envoyer</button>

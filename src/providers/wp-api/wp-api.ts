@@ -3,7 +3,7 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 20-09-2017
+ * @Last modified time: 04-10-2017
  */
 
 import { Injectable } from '@angular/core';
@@ -20,7 +20,7 @@ import { APP_CONFIG } from "../../app/app.config";
   and Angular DI.
 */
 @Injectable()
-export class WpFormationsProvider{
+export class WpApiProvider{
 
   constructor(public http: Http) {
   }

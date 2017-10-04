@@ -1,5 +1,5 @@
 <!-- Generated template for the ContactComponent component -->
-<div class="container">
+<section class="container">
   <div #sliderContainer class="sliderContainer">
     <div class="slide_item" *ngFor="let people of peoples;">
       <div class="person">
@@ -13,7 +13,9 @@
       <ion-col col-12 col-sm></ion-col>
       <ion-col>
         <form [formGroup]="form">
-          <h2>Contact</h2>
+          <header>
+            <h2>Contact</h2>
+          </header>
           <ion-list>
             <ion-item>
               <ion-label color="dark" fixed>Nom</ion-label>
@@ -44,4 +46,4 @@
       <ion-col col-12 col-sm></ion-col>
     </ion-row>
   </ion-grid>
-</div>
+</section>

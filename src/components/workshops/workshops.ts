@@ -3,7 +3,7 @@
  * @Date:   19-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 03-10-2017
+ * @Last modified time: 04-10-2017
  */
 
 import { Component, EventEmitter, Output } from '@angular/core';
@@ -11,7 +11,7 @@ import { ModalController, Modal } from 'ionic-angular';
 import { Observable } from "rxjs/Observable";
 
 import { TAppConfig } from "../../app/app.config";
-import { WpFormationsProvider } from "../../providers/wp-formations/wp-formations";
+import { WpApiProvider } from "../../providers/wp-api/wp-api";
 
 /**
  * Generated class for the WorkshopsComponent component.
@@ -31,7 +31,7 @@ export class WorkshopsComponent {
   @Output() wksDatas = new EventEmitter();
 
   constructor(
-    private wpApi:WpFormationsProvider,
+    private wpApi:WpApiProvider,
     private modalCtrl: ModalController
   ) {
     console.log('deh')
