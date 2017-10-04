@@ -9,5 +9,12 @@
 
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col col-4 *ngFor="let projet of (projects|async)">
+        <img src="{{ projet.images.medium }}" alt="">
+        <br>
+        {{ projet.title.rendered }}
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </section>

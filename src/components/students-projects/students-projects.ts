@@ -1,5 +1,13 @@
-import { Component } from '@angular/core';
+/**
+ * @Author: Nicolas Fazio <webmaster-fazio>
+ * @Date:   20-09-2017
+ * @Email:  contact@nicolasfazio.ch
+ * @Last modified by:   webmaster-fazio
+ * @Last modified time: 04-10-2017
+ */
 
+import { Component } from '@angular/core';
+import { WpApiProvider } from "../../providers/wp-api/wp-api";
 /**
  * Generated class for the StudentsProjectsComponent component.
  *
@@ -12,11 +20,15 @@ import { Component } from '@angular/core';
 })
 export class StudentsProjectsComponent {
 
-  text: string;
+  public projects:any
 
-  constructor() {
-    console.log('Hello StudentsProjectsComponent Component');
-    this.text = 'Hello World';
+  constructor(private wpApi:WpApiProvider) {
+    this.getDatas()
+  }
+
+  getDatas(){
+    this.projects = this.wpApi.getProjects({path:'projet'})
+                              .map(items => items.filter((i:any) => i.mention == '3'))
   }
 
 }
