@@ -2,6 +2,7 @@
 
 
 <ion-content>
+  <header-nav [baseUrl]="appConfig.templateEndPoint"></header-nav>
   <header-people [baseUrl]="appConfig.templateEndPoint"></header-people>
   <formations [appConfig]="appConfig"></formations>
   <workshops (wksDatas)="handleWksDatas($event)"></workshops>

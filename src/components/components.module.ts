@@ -17,6 +17,7 @@ import { StudentsProjectsComponent } from './students-projects/students-projects
 
 import { PipesModule } from "../pipes/pipes.module";
 import { WorkshopFormComponent } from './workshop-form/workshop-form';
+import { HeaderNavComponent } from './header-nav/header-nav';
 
 @NgModule({
 
@@ -27,6 +28,7 @@ import { WorkshopFormComponent } from './workshop-form/workshop-form';
     ContactComponent,
     StudentsProjectsComponent,
     WorkshopFormComponent,
+    HeaderNavComponent,
 	],
 	imports: [
 		CommonModule,
@@ -40,6 +42,7 @@ import { WorkshopFormComponent } from './workshop-form/workshop-form';
     ContactComponent,
     StudentsProjectsComponent,
     WorkshopFormComponent,
+    HeaderNavComponent,
 	]
 })
 export class ComponentsModule {}

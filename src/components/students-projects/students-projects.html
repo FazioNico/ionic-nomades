@@ -11,9 +11,18 @@
     </ion-row>
     <ion-row>
       <ion-col col-4 *ngFor="let projet of (projects|async)">
-        <img src="{{ projet.images.medium }}" alt="">
-        <br>
-        {{ projet.title.rendered }}
+        <article>
+          <a href="{{ (projet.url_projet.indexOf('projects-eleves')>=0)? 'http://www.nomades-projets.ch/'+projet.url_projet : projet.url_projet }}" target="_blank">
+            <figure>
+              <img src="{{ projet.images.large }}" alt="">
+              <figcaption>
+                <h3>{{ projet.title.rendered }}</h3>
+                <time>{{ projet.project_year }}</time>
+              </figcaption>
+            </figure>
+          </a>
+
+        </article>
       </ion-col>
     </ion-row>
   </ion-grid>

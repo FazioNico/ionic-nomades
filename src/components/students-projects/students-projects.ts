@@ -3,7 +3,7 @@
  * @Date:   20-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 04-10-2017
+ * @Last modified time: 05-10-2017
  */
 
 import { Component } from '@angular/core';
@@ -28,7 +28,11 @@ export class StudentsProjectsComponent {
 
   getDatas(){
     this.projects = this.wpApi.getProjects({path:'projet'})
-                              .map(items => items.filter((i:any) => i.mention == '3'))
+                              .map(items =>
+                                items.filter((i:{mention:string}) => i.mention >= '2')
+                                     .sort((a:{project_year:any},b:{project_year:any})=> +a.project_year - +b.project_year)
+                                     .reverse()
+                              )
   }
 
 }
