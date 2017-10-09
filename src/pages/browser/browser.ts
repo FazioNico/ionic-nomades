@@ -44,18 +44,18 @@ export class BrowserPage {
   }
 
   handleWksDatas($event:any[]):void{
-    console.log('$event->', $event)
+    //console.log('$event->', $event)
     this.wksList = $event
   }
 
   navTo(event:any){
-    let el:HTMLElement = this.elRef.nativeElement.querySelector(event)
-    console.log(event, el );
+    let el:HTMLElement = this.elRef.nativeElement.querySelector(event);
+    //console.log(event, el );
     (el)? this.content.scrollTo(0, el.offsetTop, 450): null;
   }
 
   isScrolling(event:any){
-    console.log('isScrolling-> ',event.scrollTop);
+    //console.log('isScrolling-> ',event.scrollTop);
     (event.scrollTop >= 70)? this.nav.classList.add('fixed'): this.nav.classList.remove('fixed')
   }
 

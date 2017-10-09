@@ -12,7 +12,7 @@
     <ion-row>
       <ion-col col-4 *ngFor="let projet of (projects|async)">
         <article>
-          <a href="{{ (projet.url_projet.indexOf('projects-eleves')>=0)? 'http://www.nomades-projets.ch/'+projet.url_projet : projet.url_projet }}" target="_blank">
+          <a rel="noopener" href="{{ (projet.url_projet.indexOf('projects-eleves')>=0)? 'http://www.nomades-projets.ch/'+projet.url_projet : projet.url_projet }}" target="_blank">
             <figure>
               <img src="{{ projet.images.large }}" alt="">
               <figcaption>
