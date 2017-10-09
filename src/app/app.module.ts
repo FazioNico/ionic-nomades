@@ -3,7 +3,7 @@
  * @Date:   30-05-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 03-10-2017
+ * @Last modified time: 09-10-2017
  */
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +16,11 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HttpServiceProvider } from '../providers/http-service/http-service';
 
+const ionicAppConfig:Object = {
+  tabsPlacement: 'bottom',
+  mode: 'md'
+};
+
 @NgModule({
   declarations: [
     MyApp
@@ -23,7 +28,7 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, ionicAppConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

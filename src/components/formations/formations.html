@@ -62,7 +62,7 @@
           {{ formation?.content_block_formation_3 }}
         </span>
       </ion-col>
-      <ion-col hideWhen="android,ios,mobileweb">
+      <ion-col col-12 col-sm>
         <span class="colorize last">
           {{ formation?.content_block_formation_4 }}
         </span>
@@ -72,7 +72,7 @@
   </ion-grid>
 </article>
 
-<ion-grid>
+<ion-grid hideWhen="android,ios,mobileweb">
   <ion-row #rowSvg>
     <ion-col>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -143,22 +143,22 @@
     </ion-row>
 
     <ion-row>
-      <ion-col>
+      <ion-col col-12 col-sm>
         <span class="colorize">
           {{ formation?.content_block_formation_1 }}
         </span>
       </ion-col>
-      <ion-col>
+      <ion-col col-12 col-sm>
         <span class="colorize">
           {{ formation?.content_block_formation_2 }}
         </span>
       </ion-col>
-      <ion-col>
+      <ion-col col-12 col-sm>
         <span class="colorize">
           {{ formation?.content_block_formation_3 }}
         </span>
       </ion-col>
-      <ion-col>
+      <ion-col col-12 col-sm>
         <span class="colorize last">
           {{ formation?.content_block_formation_4 }}
         </span>
@@ -168,7 +168,7 @@
 </article>
 
 
-<ion-grid>
+<ion-grid hideWhen="android,ios,mobileweb">
   <ion-row>
     <ion-col>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" [attr.width]="colWidth" height="34px" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -201,7 +201,14 @@
 </section>
 
 <section id="about_formations" *ngIf="(pageInfo|async); let infos">
-  <h2>{{ infos?.title?.rendered }}</h2>
-  <div [innerHtml]="infos?.content.rendered"></div>
-  <div class="clearfix"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>{{ infos?.title?.rendered }}</h2>
+        <div [innerHtml]="infos?.content.rendered"></div>
+        <div class="clearfix"></div>        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </section>
