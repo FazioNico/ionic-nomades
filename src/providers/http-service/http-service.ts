@@ -3,13 +3,14 @@
  * @Date:   03-10-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 03-10-2017
+ * @Last modified time: 11-10-2017
  */
 
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { APP_CONFIG } from "../../app/app.config";
 /*
   Generated class for the HttpServiceProvider provider.
 
@@ -19,7 +20,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class HttpServiceProvider {
 
-  private readonly endPoint:string = 'http://nomades.ch'
+  private readonly endPoint:string = APP_CONFIG.apiEndPoint
   private readonly contact:string = '/inc/processFromContact.php'
   private readonly preInscription:string = ''
 

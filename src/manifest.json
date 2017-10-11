@@ -1,7 +1,8 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
-  "start_url": "index.html",
+  "name": "NOMADES",
+  "short_name": "NOMADES",
+  "description": "Les Ateliers Nomades décernent quatre diplômes concernant le développement web et mobile. Ces formations intégrent le développement de projets concrets",
+  "start_url": "/",
   "display": "standalone",
   "icons": [{
     "src": "assets/imgs/logo.png",
@@ -9,5 +10,6 @@
     "type": "image/png"
   }],
   "background_color": "#4e8ef7",
+  "orientation": "portrait",
   "theme_color": "#4e8ef7"
 }
