@@ -3,7 +3,7 @@
  * @Date:   19-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 04-10-2017
+ * @Last modified time: 16-10-2017
  */
 
 import { Component, EventEmitter, Output } from '@angular/core';
@@ -34,7 +34,6 @@ export class WorkshopsComponent {
     private wpApi:WpApiProvider,
     private modalCtrl: ModalController
   ) {
-    console.log('deh')
     this.workshops = this.wpApi.getArray({path:'workshop'})
 	    .map(res => res.json().sort((wk:any)=> wk.wk_position).reverse())
       .map(datas => {

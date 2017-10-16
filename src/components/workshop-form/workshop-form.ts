@@ -3,7 +3,7 @@
 * @Date:   28-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 04-10-2017
+ * @Last modified time: 16-10-2017
 */
 
 import { Component, Inject, Input } from '@angular/core';
@@ -58,22 +58,22 @@ export class WorkshopFormComponent {
         wks4: [''],
       }),
       dates: fb.group({
-        ops1: [''],
-        ops2: [''],
-        ops3: [''],
-        ops4: [''],
+        ops1: [{value: '', disabled: true}],
+        ops2: [{value: '', disabled: true}],
+        ops3: [{value: '', disabled: true}],
+        ops4: [{value: '', disabled: true}],
       }),
       ecolage: fb.group({
-        ops1: [''],
-        ops2: [''],
-        ops3: [''],
-        ops4: [''],
+        ops1: [{value: '', disabled: true}],
+        ops2: [{value: '', disabled: true}],
+        ops3: [{value: '', disabled: true}],
+        ops4: [{value: '', disabled: true}],
       }),
       final: fb.group({
         msg:[''],
         copy:['']
       }),
-      totalEcolage: ['']
+      totalEcolage: [{value: '', disabled: true}]
     });
     let wksGroup = this.form.get('wks')
     if(!wksGroup)return;

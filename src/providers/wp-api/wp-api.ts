@@ -3,7 +3,7 @@
 * @Date:   15-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 04-10-2017
+ * @Last modified time: 16-10-2017
 */
 
 import { Injectable } from '@angular/core';
@@ -26,13 +26,13 @@ export class WpApiProvider{
   }
 
   getArray(datas:{path:string}):Observable<any> {
-    console.log('deh deh')
+    //console.log('deh deh')
     return  this.http.get( `${APP_CONFIG.apiEndPoint}/${datas.path}?per_page=100`)
                      .map(res => res)
   }
 
   getProjects(datas:{path:string}):Observable<any> {
-    console.log('deh deh')
+    //console.log('deh deh')
     return  this.http.get( `${APP_CONFIG.apiEndPoint_projets}/${datas.path}&per_page=100`)
                      .map(res => res.json())
   }
