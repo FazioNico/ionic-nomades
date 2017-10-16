@@ -1,0 +1,27 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   16-10-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 16-10-2017
+
+page-formation {
+  img {
+    max-height: 100px;
+  }
+  h1 {
+    margin-top:0px;
+    color: color($colors, red, base);
+    text-align: center;
+  }
+  button.button-md {
+    display: inline-block;
+    height:auto;
+
+    .button-inner{
+     white-space: normal;
+     //text-align: left;
+     padding: 10px;
+     line-height: 1.8rem;
+    }
+  }
+}

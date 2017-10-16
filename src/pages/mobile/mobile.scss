@@ -1,3 +1,37 @@
-page-mobile {
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   15-09-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 16-10-2017
 
+page-mobile {
+  img {
+    max-height: 100px;
+  }
+  h1 {
+    margin-top:0px;
+    color: #c33a32;
+    text-align: center;
+    //font-size: 3.4rem;
+    font-family: "AkzidenzGrotesk-Light",Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    line-height: 1.2em;
+    border-bottom: 1px solid #c33a32;
+    padding-bottom: 20px;
+    position: relative;
+    letter-spacing: 0.01em;
+    margin-left: 0px;
+    //margin-right: 29px;
+  }
+  .subtitle {
+    color: #717073;
+    text-align: center;
+    //font-size: 18px;
+    font-family: "AkzidenzGrotesk-Light",Arial,Helvetica,sans-serif;
+    line-height: 1.5em;
+    padding-bottom: 2px;
+    position: relative;
+    letter-spacing: 0.01em;
+    margin-bottom: 30px;
+  }
 }

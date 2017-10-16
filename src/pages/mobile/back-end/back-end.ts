@@ -1,6 +1,6 @@
 /**
  * @Author: Nicolas Fazio <webmaster-fazio>
- * @Date:   15-09-2017
+ * @Date:   16-10-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
  * @Last modified time: 16-10-2017
@@ -8,33 +8,29 @@
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { APP_CONFIG, TAppConfig } from "../../app/app.config";
 
 /**
- * Generated class for the MobilePage page.
+ * Generated class for the BackEndPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @IonicPage({
-  name: 'MobilePage',
-  segment: 'index'
+  name:'BackEndFormationPage',
+  segment: 'formations/back-end'
 })
 @Component({
-  selector: 'page-mobile',
-  templateUrl: 'mobile.html',
+  selector: 'page-back-end',
+  templateUrl: 'back-end.html',
 })
-export class MobilePage {
-
-  public readonly appConfig:TAppConfig;
+export class BackEndPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.appConfig = APP_CONFIG;
   }
 
-  goPage(page:string):void{
-    this.navCtrl.push(page)
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad BackEndPage');
   }
 
 }
