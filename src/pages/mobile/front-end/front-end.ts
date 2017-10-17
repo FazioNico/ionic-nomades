@@ -3,7 +3,7 @@
 * @Date:   16-10-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 16-10-2017
+ * @Last modified time: 17-10-2017
 */
 
 import { Component, OnInit } from '@angular/core';
@@ -49,5 +49,20 @@ export class FrontEndPage implements OnInit{
     if(!this.formations)return;
     this.pageInfo = this.wpApi.getObjectID({path:'pages', id:23}).map(res => res.json());
     this.frontEndFormations = this.formations.map(formations=> formations.filter((f:any)=>f.cursus[0] === 2).sort((f:any)=>f.formation_position))
+  }
+
+  displayProg(formation:any):void{
+    // console.log(formation)
+    this.navCtrl.push('DetailFormationPage', {
+      cat: 'front-end', // used for url navigation
+      name: this.convertToSlug(formation.title.rendered), // used for url navigation
+      formation: formation
+    })
+  }
+
+  convertToSlug(text:string):string{
+    return text.toLowerCase()
+               .replace(/[^\w ]+/g,'')
+               .replace(/ +/g,'-')
   }
 }

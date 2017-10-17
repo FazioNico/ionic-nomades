@@ -7,7 +7,7 @@
 <ion-header class="mobile-v">
 
   <ion-navbar>
-    <!-- <ion-title>FrontEnd</ion-title> -->
+    <ion-title>Diplôme Front End</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,13 +16,16 @@
 <ion-content padding>
   <h1 padding-left padding-right>DIPLÔMES D’INTÉGRATEUR WEB ET DE FRONT-END DÉVELOPPEUR</h1>
 
-  <ion-list margin-top>
-    <button ion-item *ngFor="let formation of (frontEndFormations|async)">
+  <ion-list *ngIf="frontEndFormations|async as formations; else loading" margin-top>
+    <button (click)="displayProg(formation)" ion-item *ngFor="let formation of formations">
       <p class="categorie">{{formation?.t_formation_b1}}</p>
       <h2>{{ formation?.title?.rendered }}</h2>
       <button ion-button clear item-end><ion-icon color="front" name="arrow-dropright"></ion-icon></button>
     </button>
   </ion-list>
+  <ng-template #loading>
+    <ion-spinner color="red" name="bubbles"></ion-spinner>
+  </ng-template>
 
 
 </ion-content>
