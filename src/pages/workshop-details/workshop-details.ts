@@ -3,7 +3,7 @@
  * @Date:   20-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 20-09-2017
+ * @Last modified time: 18-10-2017
  */
 
 import { Component } from '@angular/core';
@@ -17,7 +17,9 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
  */
 
 @IonicPage({
-  name: 'WorkshopDetailsPage'
+  name: 'WorkshopDetailsPage',
+  segment: 'workshops/:id',
+  defaultHistory: ['MobilePage']
 })
 @Component({
   selector: 'page-workshop-details',

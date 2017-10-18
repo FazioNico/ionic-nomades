@@ -1,8 +1,8 @@
 <!--
-  Generated template for the WorkshopsPage page.
+Generated template for the WorkshopsPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
 -->
 <ion-header class="mobile-v">
 
@@ -14,5 +14,17 @@
 
 
 <ion-content padding>
-
+  <div>
+    <h1>Workshops personnalisés sur demande</h1>
+    <p text-center padding-top>
+      Ces pages contiennent une sélection de workshops parmi les plus demandés dans le développement-web.
+      D’autres  Workshops peuvent être organisés sur demande, avec le programme, les dates, les horaires et le lieu souhaités par les clients.
+      Les cours peuvent être dispensés en français ou en anglais. N’hésitez pas à nous Contacter.
+    </p>
+  </div>
+  <div padding-top>
+    <button ion-button color="front" (click)="goWorkshops('WorkshopsFrontPage')">workshop front-end development</button>
+    <button ion-button color="mobile" (click)="goWorkshops('WorkshopsMobilePage')">workshop mobile applications development</button>
+    <button ion-button color="back" (click)="goWorkshops('WorkshopsBackPage')">workshop back-end development</button>
+  </div>
 </ion-content>

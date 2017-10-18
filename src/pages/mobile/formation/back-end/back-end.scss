@@ -1,0 +1,28 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   16-10-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 18-10-2017
+
+page-back-end {
+  .cat {
+    display: block;
+  }
+  p {
+    color: color($colors, red, base);
+  }
+  h1 {
+    color: color($colors, red, base);
+  }
+  h2 {
+    color: color($colors, back, base);
+  }
+  ion-label {
+    white-space: normal;
+  }
+
+  .list-md .item-block .item-inner, .list-md > .item-block:last-child .item-inner {
+    border-bottom: solid 5px color($colors, back, base)!important;
+  }
+
+}

@@ -1,0 +1,56 @@
+<!--
+  Generated template for the WorkshopsMobilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="mobile-v">
+
+  <ion-navbar>
+    <ion-title>Workshops Mobile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1 padding-left padding-right>nomades advanced technologies interactive workshops mobile applications development</h1>
+
+  <div *ngIf="(workshops|async); let wks; else loading">
+
+    <section margin-top padding-top>
+      <p padding-left padding-right>Mobile-web apps. develpmt.</p>
+      <ion-list>
+        <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 13})">
+          <h2>{{workshop?.title.rendered}}</h2>
+          <button ion-button clear item-end><ion-icon color="mobile" name="arrow-dropright"></ion-icon></button>
+        </button>
+      </ion-list>
+    </section>
+
+    <section margin-top padding-top>
+      <p padding-left padding-right>Mobile native apps s/Android</p>
+      <ion-list>
+        <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 14})">
+          <h2>{{workshop?.title.rendered}}</h2>
+          <button ion-button clear item-end><ion-icon color="mobile" name="arrow-dropright"></ion-icon></button>
+        </button>
+      </ion-list>
+    </section>
+
+    <section margin-top padding-top>
+      <p padding-left padding-right>Mobile native apps s/iOS</p>
+      <ion-list>
+        <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 15})">
+          <h2>{{workshop?.title.rendered}}</h2>
+          <button ion-button clear item-end><ion-icon color="mobile" name="arrow-dropright"></ion-icon></button>
+        </button>
+      </ion-list>
+    </section>
+  </div>
+  <ng-template #loading>
+    <ion-spinner color="red" name="bubbles"></ion-spinner>
+  </ng-template>
+
+</ion-content>

@@ -16,13 +16,16 @@
 <ion-content padding>
   <h1 padding-left padding-right>DIPLÔMES DE BACK-END DEVELOPER ET DE MOBILE APPLICATIONS DEVELOPER</h1>
 
-  <ion-list margin-top>
-    <button (click)="displayProg(formation)" ion-item *ngFor="let formation of (backEndFormations|async)">
+  <ion-list *ngIf="backEndFormations|async as formations; else loading" margin-top >
+    <button (click)="displayProg(formation)" ion-item *ngFor="let formation of formations">
       <p class="categorie">{{formation?.t_formation_b1}}</p>
       <h2>{{ formation?.title?.rendered }}</h2>
       <button ion-button clear item-end><ion-icon color="back" name="arrow-dropright"></ion-icon></button>
     </button>
   </ion-list>
+  <ng-template #loading>
+    <ion-spinner color="red" name="bubbles"></ion-spinner>
+  </ng-template>
 
 
 </ion-content>

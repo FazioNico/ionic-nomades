@@ -3,7 +3,7 @@
  * @Date:   16-10-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 16-10-2017
+ * @Last modified time: 18-10-2017
  */
 
 import { Component } from '@angular/core';
@@ -21,7 +21,8 @@ import { TAppConfig, APP_CONFIG } from "../../../app/app.config";
 
 @IonicPage({
   name:'FormationsPage',
-  segment: 'formations'
+  segment: 'formations',
+  defaultHistory: ['MobilePage']
 })
 @Component({
   selector: 'page-formation',
