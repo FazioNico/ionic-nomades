@@ -1,5 +1,14 @@
+/**
+ * @Author: Nicolas Fazio <webmaster-fazio>
+ * @Date:   16-10-2017
+ * @Email:  contact@nicolasfazio.ch
+ * @Last modified by:   webmaster-fazio
+ * @Last modified time: 18-10-2017
+ */
+
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
+import { APP_CONFIG, TAppConfig } from "../../../app/app.config";
 
 /**
  * Generated class for the ContactPage page.
@@ -8,18 +17,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'ContactPage',
+  segment: 'contact',
+  defaultHistory: ['MobilePage']
+})
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html',
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  public readonly appConfig:TAppConfig;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactPage');
+  constructor() {
+    this.appConfig = APP_CONFIG;
   }
 
 }

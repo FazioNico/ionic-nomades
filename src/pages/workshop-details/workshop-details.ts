@@ -28,6 +28,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 export class WorkshopDetailsPage {
 
   public readonly wk:any;
+  public readonly platform:any;
   private _color:string;
 
   constructor(
@@ -36,6 +37,7 @@ export class WorkshopDetailsPage {
     public navParams: NavParams
   ) {
     this.wk = this.navParams.get('wk')
+    this.platform = this.navParams.get('platform') || 'browser'
   }
 
   get color():string{
@@ -62,6 +64,15 @@ export class WorkshopDetailsPage {
   }
 
   goInscription(){
-    this.viewCtrl.dismiss(true);
+    if(this.platform === 'mobile'){
+      this.navCtrl.push('InscriptionPage')
+                  .then(_=> this.dismiss())
+      return
+    }
+    // TODO: scroll to inscription section...
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
   }
 }

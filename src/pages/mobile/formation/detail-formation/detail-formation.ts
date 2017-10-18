@@ -3,7 +3,7 @@
 * @Date:   17-10-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 17-10-2017
+ * @Last modified time: 18-10-2017
 */
 
 import { Component } from '@angular/core';
@@ -51,7 +51,6 @@ export class DetailFormationPage {
   }
 
   goInscription(){
-    // TODO: page inscription
-    alert('TODO: page inscription')
+    this.navCtrl.push('InscriptionPage')
   }
 }

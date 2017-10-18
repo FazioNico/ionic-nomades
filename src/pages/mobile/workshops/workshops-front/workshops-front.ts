@@ -47,7 +47,7 @@ export class WorkshopsFrontPage {
   displayDetail(wks:any){
     console.log('wks->', wks)
     this._modal = this.modalCtrl.create(
-      'WorkshopDetailsPage', { wk: wks }
+      'WorkshopDetailsPage', { wk: wks, platform: 'mobile' }
     );
     this._modal.present();
     this._modal.onDidDismiss(data => {

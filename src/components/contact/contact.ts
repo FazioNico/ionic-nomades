@@ -3,7 +3,7 @@
 * @Date:   20-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 03-10-2017
+ * @Last modified time: 18-10-2017
 */
 
 import { Component, Input, OnInit, ViewChild, ElementRef, Renderer, Inject } from '@angular/core';
@@ -29,6 +29,7 @@ export class ContactComponent implements OnInit{
   private annimStep:number = 0;
   private annimDirection:boolean = true;
   @Input('baseUrl') private readonly baseUrl:string;
+  @Input('platform') private readonly platform:string =  'browser';
   @ViewChild('sliderContainer') private sliderContainer:ElementRef;
 
   constructor(
@@ -73,6 +74,9 @@ export class ContactComponent implements OnInit{
 
   initPoepleSlider():void{
     //this.renderer.setElementStyle(this.sliderContainer.nativeElement, 'margin-bottom', `-500px`)
+    if(!this.sliderContainer){
+      return;
+    }
     setInterval(_=> {
       //console.log(this.annimStep, this.peoples.length-1)
       if(this.annimDirection === true){

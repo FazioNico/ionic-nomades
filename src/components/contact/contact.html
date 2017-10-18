@@ -1,19 +1,21 @@
 <!-- Generated template for the ContactComponent component -->
 <section class="container">
-  <div #sliderContainer class="sliderContainer">
-    <div class="slide_item" *ngFor="let people of peoples;">
+
+  <div #sliderContainer *ngIf="platform === 'browser'" class="sliderContainer">
+    <div class="slide_item" *ngFor="let people of peoples;" >
       <div class="person">
         <img src="{{baseUrl}}/images/perso_contact/{{people.name}}" alt="">
       </div>
       <div class="animTxt" [innerHtml]="people.txt"></div>
     </div>
   </div>
-  <ion-grid id="contactFormZone">
+
+  <ion-grid id="contactFormZone" [ngClass]="{'mobile': (platform != 'browser')}">
     <ion-row>
       <ion-col col-12 col-sm></ion-col>
       <ion-col>
         <form [formGroup]="form">
-          <header>
+          <header *ngIf="platform === 'browser'">
             <h2>Contact</h2>
           </header>
           <ion-list>
