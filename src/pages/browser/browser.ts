@@ -3,7 +3,7 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 17-10-2017
+ * @Last modified time: 19-10-2017
  */
 
 import { Component, ViewChild , ElementRef} from '@angular/core';
@@ -20,7 +20,7 @@ import { APP_CONFIG, TAppConfig } from "../../app/app.config";
 
 @IonicPage({
   name: 'BrowserPage',
-  segment: 'index'
+  segment: 'main'
 })
 @Component({
   selector: 'page-browser',
