@@ -3,11 +3,12 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 16-10-2017
+ * @Last modified time: 20-10-2017
  */
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular/navigation/ionic-page';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
 import { APP_CONFIG, TAppConfig } from "../../app/app.config";
 
 /**
@@ -29,7 +30,7 @@ export class MobilePage {
 
   public readonly appConfig:TAppConfig;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
     this.appConfig = APP_CONFIG;
   }
 

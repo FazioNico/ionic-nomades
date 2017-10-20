@@ -3,11 +3,12 @@
  * @Date:   18-10-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 18-10-2017
+ * @Last modified time: 20-10-2017
  */
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular/navigation/ionic-page';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
 import { Observable } from "rxjs/Observable";
 
 import { TAppConfig } from "../../../app/app.config";
@@ -35,7 +36,6 @@ export class InscriptionPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
     private wpApi:WpApiProvider
   ) {
     this.workshops = this.wpApi.getArray({path:'workshop'})
