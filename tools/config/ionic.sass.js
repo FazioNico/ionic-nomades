@@ -3,7 +3,7 @@
  * @Date:   19-10-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 19-10-2017
+ * @Last modified time: 23-10-2017
  */
  /**
    * Ionic SASS config v.0.1.0
@@ -71,6 +71,7 @@
      */
     excludeFiles: [
       /\.(wp|ios).(scss)$/i,
+      /(badge|card|chip|datetime|item-reorder|item-sliding|note|picker|popover|radio|select|select|virtual-scroll|cordova)/i,
      //   /(action-sheet|alert|badge|card|checkbox|chip|datetime|grid|item-reorder|item-sliding|label|loading|note|picker|popover|radio|range|select|select|slides|toggle|virtual-scroll|cordova)/i,
     ],
 
