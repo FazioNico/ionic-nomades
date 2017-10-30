@@ -23,7 +23,7 @@
       <p padding-left padding-right>Interfaces graphiques</p>
       <ion-list>
         <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 7})">
-          <h2>{{workshop?.title.rendered}}</h2>
+          <h2>{{ workshop?.title.rendered|replaceBy }}</h2>
           <button ion-button clear item-end><ion-icon color="front" name="arrow-dropright"></ion-icon></button>
         </button>
       </ion-list>
@@ -33,7 +33,7 @@
       <p padding-left padding-right>Web editing</p>
       <ion-list>
         <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 8})">
-          <h2>{{workshop?.title.rendered}}</h2>
+          <h2>{{ workshop?.title.rendered|replaceBy }}</h2>
           <button ion-button clear item-end><ion-icon color="front" name="arrow-dropright"></ion-icon></button>
         </button>
       </ion-list>
@@ -43,7 +43,7 @@
       <p padding-left padding-right>Programmation javascript</p>
       <ion-list>
         <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 9})">
-          <h2>{{workshop?.title.rendered}}</h2>
+          <h2>{{ workshop?.title.rendered|replaceBy }}</h2>
           <button ion-button clear item-end><ion-icon color="front" name="arrow-dropright"></ion-icon></button>
         </button>
       </ion-list>

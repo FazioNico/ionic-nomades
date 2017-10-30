@@ -14,7 +14,7 @@
 <ion-header>
   <ion-toolbar [ngStyle]="{'background': color}">
     <ion-title>
-      {{ wk.titre_workshop_cour }}
+      {{ wk.titre_workshop_cour|replaceBy }}
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -26,7 +26,7 @@
 
 <ion-content padding>
   <h3 [ngStyle]="{'color': color}">Programme</h3>
-  <div [innerHtml]="wk.programme_workshop"></div>
+  <div [innerHtml]="wk.programme_workshop|replaceBy"></div>
   <hr/>
   <div>
     <p>

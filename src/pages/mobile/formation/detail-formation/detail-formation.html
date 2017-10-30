@@ -20,26 +20,25 @@ Ionic pages and navigation.
     <h1 [ngStyle]="{'color': hexaCat}">{{formation?.title.rendered}}</h1>
     <p [ngStyle]="{'color': hexaCat}">
       Prochaines dates: {{ formation?.date_formation_du}} - {{ formation?.date_formation_au}}<br>
-      Programme de formation:
     </p>
   </div>
   <!-- <pre>{{formation|json}}</pre> -->
   <ion-list padding-right>
     <ion-item [ngClass]="{'front': (cat==='front')?true:false, 'back': (cat==='front')?false:true, 'third': false}" *ngIf="formation?.content_block_formation_1">
       <p>Module 1:</p>
-      <p>{{formation?.content_block_formation_1}}</p>
+      <p>{{formation?.content_block_formation_1|replaceBy}}</p>
     </ion-item>
     <ion-item [ngClass]="{'front': (cat==='front')?true:false, 'back': (cat==='front')?false:true, 'third': false}" *ngIf="formation?.content_block_formation_2">
       <p>Module 2:</p>
-      <p>{{formation?.content_block_formation_2}}</p>
+      <p>{{formation?.content_block_formation_2|replaceBy}}</p>
     </ion-item>
     <ion-item [ngClass]="{'front': (cat==='front')?true:false, 'back': (cat==='front')?false:true, 'third': false}" *ngIf="formation?.content_block_formation_3">
       <p>Module 3:</p>
-      <p>{{formation?.content_block_formation_3}}</p>
+      <p>{{formation?.content_block_formation_3|replaceBy}}</p>
     </ion-item>
     <ion-item [ngClass]="{'front': (cat==='front')?true:false, 'back': (cat==='front')?false:true, 'third': false}" *ngIf="formation?.content_block_formation_4">
       <p>Module 4:</p>
-      <p>{{formation?.content_block_formation_4}}</p>
+      <p>{{formation?.content_block_formation_4|replaceBy}}</p>
     </ion-item>
   </ion-list>
   <br>
@@ -48,7 +47,7 @@ Ionic pages and navigation.
       Pré-inscription
     </button>
     <p (click)="dowloadPDF(formation?.wp_custom_attachment?.url)" text-center>
-      Télécharger le programme PDF
+      Télécharger le programme de formation PDF
     </p>
   </div>
 </ion-content>

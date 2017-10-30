@@ -23,7 +23,7 @@
       <p padding-left padding-right>Mobile-web apps. develpmt.</p>
       <ion-list>
         <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 13})">
-          <h2>{{workshop?.title.rendered}}</h2>
+          <h2>{{workshop?.title.rendered|replaceBy}}</h2>
           <button ion-button clear item-end><ion-icon color="mobile" name="arrow-dropright"></ion-icon></button>
         </button>
       </ion-list>
@@ -33,7 +33,7 @@
       <p padding-left padding-right>Mobile native apps s/Android</p>
       <ion-list>
         <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 14})">
-          <h2>{{workshop?.title.rendered}}</h2>
+          <h2>{{workshop?.title.rendered|replaceBy}}</h2>
           <button ion-button clear item-end><ion-icon color="mobile" name="arrow-dropright"></ion-icon></button>
         </button>
       </ion-list>
@@ -43,7 +43,7 @@
       <p padding-left padding-right>Mobile native apps s/iOS</p>
       <ion-list>
         <button (click)="displayDetail(workshop)" ion-item *ngFor="let workshop of ((wks)|filterBy:{prop: 'parcours', value: 15})">
-          <h2>{{workshop?.title.rendered}}</h2>
+          <h2>{{workshop?.title.rendered|replaceBy}}</h2>
           <button ion-button clear item-end><ion-icon color="mobile" name="arrow-dropright"></ion-icon></button>
         </button>
       </ion-list>

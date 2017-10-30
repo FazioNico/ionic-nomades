@@ -14,7 +14,7 @@
     <ion-grid>
 
       <ion-row formGroupName="infos">
-        <ion-col col-8>
+        <ion-col col-12 col-sm>
           <h2>PRE-INSCRIPTION WORKSHOPS</h2>
           <ion-list>
             <ion-item>
@@ -47,50 +47,51 @@
             </ion-item>
           </ion-list>
         </ion-col>
+        <ion-col col-4></ion-col>
       </ion-row>
 
       <ion-row>
-        <ion-col col-8 formGroupName="wks">
+        <ion-col col-12 col-sm formGroupName="wks">
           <p class="like_h2">Cliquez sur les workshops auxquels vous souhaitez vous pré-inscrire</p>
         </ion-col>
-        <ion-col col-2 padding-left class="right_col">
+        <ion-col col-2 hideWhen="android,ios" padding-left class="right_col">
           <p>Dates</p>
         </ion-col>
-        <ion-col col-2 class="right_col">
+        <ion-col col-2 hideWhen="android,ios" class="right_col">
           <p>Ecolages</p>
         </ion-col>
       </ion-row>
 
       <!-- item option row -->
       <ion-row>
-        <ion-col col-8 formGroupName="wks">
+        <ion-col col-12 col-sm formGroupName="wks">
           <div class="item item-block item-md item-input item-label-fixed customSelectItem">
             <select formControlName="wks1" class="item-inner">
               <option value="">Choisir un workshop</option>
               <optgroup label="front-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="back-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="mobile applications development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
             </select>
           </div>
         </ion-col>
-        <ion-col formGroupName="dates" col-2 padding-left class="right_col">
+        <ion-col formGroupName="dates" hideWhen="android,ios" col-2 padding-left class="right_col">
           <ion-item>
             <ion-input type="text" formControlName="ops1" name="dates"  placeholder=""></ion-input>
           </ion-item>
         </ion-col>
-        <ion-col formGroupName="ecolage" col-2 class="right_col">
+        <ion-col formGroupName="ecolage" hideWhen="android,ios" col-2 class="right_col">
           <ion-item>
             <ion-input type="text" formControlName="ops1" name="price"  placeholder=""></ion-input>
           </ion-item>
@@ -98,34 +99,34 @@
       </ion-row>
 
       <ion-row>
-        <ion-col col-8 formGroupName="wks">
+        <ion-col col-12 col-sm formGroupName="wks">
           <div class="item item-block item-md item-input item-label-fixed customSelectItem">
             <select formControlName="wks3" class="item-inner">
               <option value="">Choisir un workshop</option>
               <optgroup label="front-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="back-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="mobile applications development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
             </select>
           </div>
         </ion-col>
-        <ion-col formGroupName="dates" col-2 padding-left class="right_col">
+        <ion-col formGroupName="dates" hideWhen="android,ios" col-2 padding-left class="right_col">
           <ion-item>
             <ion-input type="text" formControlName="ops3" name="dates"  placeholder=""></ion-input>
           </ion-item>
         </ion-col>
-        <ion-col formGroupName="ecolage" col-2 class="right_col">
+        <ion-col formGroupName="ecolage" hideWhen="android,ios" col-2 class="right_col">
           <ion-item>
             <ion-input type="text" formControlName="ops3" name="price"  placeholder=""></ion-input>
           </ion-item>
@@ -133,34 +134,34 @@
       </ion-row>
 
       <ion-row>
-        <ion-col col-8 formGroupName="wks">
+        <ion-col ccol-12 col-sm formGroupName="wks">
           <div class="item item-block item-md item-input item-label-fixed customSelectItem">
             <select formControlName="wks4" class="item-inner">
               <option value="">Choisir un workshop</option>
               <optgroup label="front-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="back-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="mobile applications development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
             </select>
           </div>
         </ion-col>
-        <ion-col formGroupName="dates" col-2 padding-left class="right_col">
+        <ion-col formGroupName="dates" hideWhen="android,ios" col-2 padding-left class="right_col">
           <ion-item>
             <ion-input type="text" formControlName="ops4" name="dates"  placeholder=""></ion-input>
           </ion-item>
         </ion-col>
-        <ion-col formGroupName="ecolage" col-2 class="right_col">
+        <ion-col formGroupName="ecolage" hideWhen="android,ios" col-2 class="right_col">
           <ion-item>
             <ion-input type="text" formControlName="ops4" name="price" placeholder=""></ion-input>
           </ion-item>
@@ -169,40 +170,40 @@
 
       <!-- item total final row -->
       <ion-row>
-        <ion-col col-8>
+        <ion-col col-12 col-sm>
           <div formGroupName="wks" class="item customSelectItem item-block item-md item-input item-label-fixed">
             <select formControlName="wks2" class="item-inner">
               <option value="">Choisir un workshop</option>
               <optgroup label="front-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 7});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 8});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 9});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="back-end development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 10});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 11});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 12});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
               <optgroup label="mobile applications development">
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
-                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 13});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 14});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
+                <option *ngFor="let workshop of (wksList|filterBy:{prop: 'parcours', value: 15});let i = index" value="{{workshop|json}}">{{ workshop?.title.rendered|replaceBy}}</option>
               </optgroup>
             </select>
           </div>
           <p text-right>
-            Total écolage :
+            Total écolage : <span showWhen="android,ios">{{form.controls.totalEcolage.value}}</span>
           </p>
           <p class="info_form">
             Les Pré-Inscriptions doivent être confirmées par le versement des écolages deux semaines avant le début des cours. Après ce délai les Pré-Inscriptions sont caduques.
           </p>
         </ion-col>
-        <ion-col formGroupName="dates" col-2 padding-left class="right_col">
+        <ion-col formGroupName="dates" col-2 hideWhen="android,ios" padding-left class="right_col">
           <ion-item>
             <ion-input type="text" formControlName="ops2" name="dates" placeholder=""></ion-input>
           </ion-item>
         </ion-col>
-        <ion-col col-2 class="right_col">
+        <ion-col col-2 hideWhen="android,ios" class="right_col">
           <ion-item formGroupName="ecolage">
             <ion-input type="text" formControlName="ops2" name="price" placeholder=""></ion-input>
           </ion-item>
@@ -223,7 +224,7 @@
             IBAN CH56 0027 9279 2335 3400 A
           </p>
         </ion-col>
-        <ion-col col-4 padding-left class="textareaZone">
+        <ion-col col-sm col-12 padding-left class="textareaZone">
           <ion-item margin-bottom>
             <ion-textarea formControlName="msg" placeholder="Ajouter un commentaire"></ion-textarea>
           </ion-item>
