@@ -3,7 +3,7 @@
  * @Date:   05-10-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 09-10-2017
+ * @Last modified time: 06-11-2017
  */
 
 import { Component, Input, QueryList, ViewChildren, ElementRef, Output, EventEmitter } from '@angular/core';
@@ -44,7 +44,7 @@ export class HeaderNavComponent {
   navigateTo():(e:Event)=>EventClickLink{
     return (e:EventClickLink)=> {
       e.preventDefault()
-      console.log(e.target.hash.slice(1,e.target.hash.length))
+      //console.log(e.target.hash.slice(1,e.target.hash.length))
       this.navTo.emit(e.target.hash.slice(1,e.target.hash.length))
       return e;
     }

@@ -3,7 +3,7 @@
  * @Date:   30-05-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 02-11-2017
+ * @Last modified time: 06-11-2017
  */
 
 import { Component } from '@angular/core';

@@ -26,7 +26,7 @@
       <ion-row>
         <ion-col>
           <p class="categorie">{{formation?.t_formation_b1}}</p>
-          <h2>{{ formation?.title?.rendered }}</h2>
+          <h2>{{ formation?.title?.rendered|replaceBy }}</h2>
         </ion-col>
         <ion-col text-right>
 
@@ -49,22 +49,22 @@
     <ion-row>
       <ion-col col-12 col-sm>
         <span class="colorize">
-          {{ formation?.content_block_formation_1 }}
+          {{ formation?.content_block_formation_1|replaceBy }}
         </span>
       </ion-col>
       <ion-col col-12 col-sm>
         <span class="colorize">
-          {{ formation?.content_block_formation_2 }}
+          {{ formation?.content_block_formation_2|replaceBy }}
         </span>
       </ion-col>
       <ion-col col-12 col-sm>
         <span class="colorize">
-          {{ formation?.content_block_formation_3 }}
+          {{ formation?.content_block_formation_3|replaceBy }}
         </span>
       </ion-col>
       <ion-col col-12 col-sm>
         <span class="colorize last">
-          {{ formation?.content_block_formation_4 }}
+          {{ formation?.content_block_formation_4|replaceBy }}
         </span>
       </ion-col>
     </ion-row>
@@ -121,8 +121,8 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <p class="categorie">{{formation?.t_formation_b1}}</p>
-          <h2>{{ formation?.title?.rendered }}</h2>
+          <p class="categorie">{{formation?.t_formation_b1|replaceBy}}</p>
+          <h2>{{ formation?.title?.rendered|replaceBy }}</h2>
         </ion-col>
         <ion-col text-right>
 
@@ -145,22 +145,22 @@
     <ion-row>
       <ion-col col-12 col-sm>
         <span class="colorize">
-          {{ formation?.content_block_formation_1 }}
+          {{ formation?.content_block_formation_1|replaceBy }}
         </span>
       </ion-col>
       <ion-col col-12 col-sm>
         <span class="colorize">
-          {{ formation?.content_block_formation_2 }}
+          {{ formation?.content_block_formation_2|replaceBy }}
         </span>
       </ion-col>
       <ion-col col-12 col-sm>
         <span class="colorize">
-          {{ formation?.content_block_formation_3 }}
+          {{ formation?.content_block_formation_3|replaceBy }}
         </span>
       </ion-col>
       <ion-col col-12 col-sm>
         <span class="colorize last">
-          {{ formation?.content_block_formation_4 }}
+          {{ formation?.content_block_formation_4|replaceBy }}
         </span>
       </ion-col>
     </ion-row>
@@ -204,9 +204,9 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <h2>{{ infos?.title?.rendered }}</h2>
+        <h2>{{ infos?.title?.rendered|replaceBy }}</h2>
         <div [innerHtml]="infos?.content.rendered"></div>
-        <div class="clearfix"></div>        
+        <div class="clearfix"></div>
       </ion-col>
     </ion-row>
   </ion-grid>

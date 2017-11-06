@@ -3,7 +3,7 @@
  * @Date:   08-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 02-11-2017
+ * @Last modified time: 06-11-2017
  */
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -16,6 +16,7 @@ export interface WindowSW extends Window {
 
 //AppModule.installServiceWorker();
 platformBrowserDynamic().bootstrapModule(AppModule).then(_=> {
+/*
   let cond = 'serviceWorker' in navigator && ['localhost', '127', '8100'].indexOf(location.hostname) === -1;
   if (cond) {
       navigator.serviceWorker.register('service-worker.js')
@@ -24,6 +25,7 @@ platformBrowserDynamic().bootstrapModule(AppModule).then(_=> {
         registration.onupdatefound = () => {
           const installingWorker = registration.installing;
           if(!installingWorker) {
+            console.log('no installingWorker')
             return;
           }
 
@@ -47,4 +49,5 @@ platformBrowserDynamic().bootstrapModule(AppModule).then(_=> {
   else {
     console.log('[serviceWorker] no service worker available. status:', cond)
   }
+*/
 })

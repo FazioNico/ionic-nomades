@@ -3,7 +3,7 @@
 * @Date:   18-10-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 18-10-2017
+ * @Last modified time: 06-11-2017
 */
 
 import { Component } from '@angular/core';
@@ -46,7 +46,7 @@ export class WorkshopsMobilePage {
   }
 
   displayDetail(wks:any){
-    console.log('wks->', wks)
+    // console.log('wks->', wks)
     this._modal = this.modalCtrl.create(
       'WorkshopDetailsPage', { wk: wks, platform: 'mobile' }
     );

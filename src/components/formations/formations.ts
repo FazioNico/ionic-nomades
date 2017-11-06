@@ -3,7 +3,7 @@
  * @Date:   15-09-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 04-10-2017
+ * @Last modified time: 06-11-2017
  */
 
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
@@ -39,7 +39,7 @@ export class FormationsComponent implements OnInit{
   }
 
   ngOnInit(){
-    console.log(this.rowSvg.nativeElement.clientWidth)
+    //console.log(this.rowSvg.nativeElement.clientWidth)
     this.colWidth = (this.rowSvg.nativeElement.clientWidth / 4) -20
     this.point = `0,3 0,13 ${this.colWidth},13`;
 
